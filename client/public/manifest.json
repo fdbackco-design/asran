@@ -1,0 +1,121 @@
+{
+  "name": "아슬란(ASRAN) - 독일 기술력의 프리미엄 주방용품",
+  "short_name": "ASRAN",
+  "description": "독일 기술력과 합리적 가격을 자랑하는 아슬란 주방용품. 냄비 세트, 후라이팬, 압력솥으로 완벽한 요리를 경험하세요.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F9FAFB",
+  "theme_color": "#1F2937",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "ko-KR",
+  "categories": ["shopping", "lifestyle", "food"],
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "제품 카탈로그",
+      "short_name": "제품",
+      "description": "아슬란의 모든 제품을 둘러보세요",
+      "url": "/products",
+      "icons": [{ "src": "/icons/shortcut-products.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "레시피",
+      "short_name": "레시피",
+      "description": "아슬란 제품으로 만드는 다양한 레시피",
+      "url": "/blog",
+      "icons": [{ "src": "/icons/shortcut-recipes.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "장바구니",
+      "short_name": "장바구니",
+      "description": "장바구니를 확인하고 주문하세요",
+      "url": "/cart",
+      "icons": [{ "src": "/icons/shortcut-cart.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "고객센터",
+      "short_name": "고객센터",
+      "description": "FAQ와 1:1 문의 서비스",
+      "url": "/support",
+      "icons": [{ "src": "/icons/shortcut-support.png", "sizes": "96x96" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop-home.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "ASRAN 홈페이지"
+    },
+    {
+      "src": "/screenshots/mobile-products.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "제품 카탈로그"
+    },
+    {
+      "src": "/screenshots/mobile-recipes.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "레시피 목록"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}

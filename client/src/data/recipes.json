@@ -1,0 +1,130 @@
+[
+  {
+    "id": "kimchi-stew-22cm",
+    "title": "기본 김치찌개",
+    "suitableProducts": ["asran-pot-3set"],
+    "bestWith": "22cm 양수냄비",
+    "difficulty": "초급",
+    "timeMinutes": 25,
+    "servings": 2,
+    "ingredients": [
+      "신김치 200g",
+      "돼지목살 150g",
+      "양파 1/2개",
+      "두부 1/2모",
+      "고춧가루 1.5T",
+      "간장 1T",
+      "다시다 또는 멸치육수 400ml"
+    ],
+    "steps": [
+      "냄비에 기름을 두르고 돼지고기와 김치를 3분 볶아 풍미를 올린다.",
+      "물/육수 400ml와 양파를 넣고 중불 10분 끓인다.",
+      "두부를 넣고 고춧가루·간장으로 간을 맞추고 5분 더 끓인다."
+    ],
+    "tips": [
+      "바닥 3중 구조로 중불만으로 충분히 끓어 넘침을 줄입니다.",
+      "인덕션은 6~7단(중불) 권장."
+    ],
+    "schema": "Recipe",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "steak-pan",
+    "title": "굽기 쉬운 팬 스테이크",
+    "suitableProducts": ["asran-frypan-28"],
+    "bestWith": "28cm 후라이팬",
+    "difficulty": "중급",
+    "timeMinutes": 15,
+    "servings": 2,
+    "ingredients": [
+      "등심 2장(2cm)",
+      "소금/후추",
+      "버터 20g",
+      "허브"
+    ],
+    "steps": [
+      "팬을 예열 후 소금·후추한 고기를 강불 1분씩 겉면 시어링.",
+      "중불로 낮춰 버터·허브 넣고 2~3분 베이스팅.",
+      "호일에 5분 레스팅."
+    ],
+    "tips": ["팬이 충분히 달궈진 뒤 올리면 들러붙음 방지."],
+    "schema": "Recipe",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "galbijjim-pressure",
+    "title": "압력솥 갈비찜",
+    "suitableProducts": ["asran-pressure-24"],
+    "bestWith": "24cm 압력솥",
+    "difficulty": "중급",
+    "timeMinutes": 35,
+    "servings": 4,
+    "ingredients": [
+      "소갈비 1kg",
+      "간장 6T",
+      "설탕 2T",
+      "마늘 1T",
+      "배즙 100ml",
+      "물 400ml"
+    ],
+    "steps": [
+      "갈비 핏물 빼고 양념과 물을 넣는다.",
+      "압력추 회전 후 중불 20분, 잔압 제거 후 채소 넣고 5분 더 조림."
+    ],
+    "tips": ["압력 해제는 자연감압을 권장."],
+    "schema": "Recipe",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "pasta-pot",
+    "title": "봉골레 파스타",
+    "suitableProducts": ["asran-pot-3set", "asran-frypan-28"],
+    "bestWith": "22cm 양수냄비 + 28cm 팬",
+    "difficulty": "중급",
+    "timeMinutes": 20,
+    "servings": 2,
+    "ingredients": [
+      "스파게티 200g",
+      "바지락 300g",
+      "마늘 4쪽",
+      "올리브오일 4T",
+      "화이트와인 100ml",
+      "파슬리",
+      "소금/후추"
+    ],
+    "steps": [
+      "양수냄비에 물을 끓여 파스타를 al dente로 삶는다.",
+      "팬에 올리브오일, 마늘을 볶다가 바지락과 화이트와인 추가.",
+      "파스타와 파슬리를 넣고 1분간 버무린다."
+    ],
+    "tips": ["파스타 물은 짜지 않게, 바지락 국물이 간을 담당합니다."],
+    "schema": "Recipe",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "vegetable-prep-knife",
+    "title": "완벽한 채소 썰기 가이드",
+    "suitableProducts": ["asran-knife-board-set"],
+    "bestWith": "셰프나이프 20cm + 대나무 도마",
+    "difficulty": "초급",
+    "timeMinutes": 10,
+    "servings": 1,
+    "ingredients": [
+      "양파 1개",
+      "당근 1개",
+      "감자 2개",
+      "대파 2대"
+    ],
+    "steps": [
+      "도마를 안정적으로 놓고 논슬립 베이스를 확인한다.",
+      "셰프나이프로 양파는 반달 썰기, 당근은 어슷 썰기한다.",
+      "감자는 깍둑썰기, 대파는 송송 썰어 준비 완료."
+    ],
+    "tips": [
+      "항균 도마는 사용 후 찬물로 헹구세요.",
+      "칼날이 예리하니 안전하게 손가락을 보호하세요."
+    ],
+    "schema": "Recipe",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  }
+]
