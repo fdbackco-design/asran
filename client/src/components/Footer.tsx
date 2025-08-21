@@ -1,5 +1,7 @@
 import { Link } from "wouter";
 
+import AsranLogo from "./AsranLogo";
+
 export default function Footer() {
   return (
     <footer className="bg-asran-gray text-white" data-testid="footer">
@@ -8,8 +10,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
-              <span className="text-3xl font-bold">ASRAN</span>
-              <span className="ml-3 text-asran-amber">독일 기술력</span>
+              <AsranLogo width="150" height="36" className="h-9" />
             </div>
             <p className="text-gray-300 mb-6 text-lg leading-relaxed">
               독일의 정밀한 기술력과 합리적인 가격으로<br />

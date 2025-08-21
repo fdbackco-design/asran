@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useCart } from "@/hooks/use-cart";
 import SearchBox from "./SearchBox";
+import AsranLogo from "./AsranLogo";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,8 +35,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center" data-testid="link-home">
-            <span className="text-2xl font-bold text-asran-gray">ASRAN</span>
-            <span className="ml-2 text-sm text-gray-500 hidden sm:block">독일 기술력</span>
+            <AsranLogo width="120" height="30" className="h-8" />
           </Link>
 
           {/* Navigation */}
