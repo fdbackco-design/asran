@@ -30,17 +30,9 @@ export default function RecipeCard({ recipe, onViewRecipe, className }: RecipeCa
         <div className="flex items-start space-x-4">
           {/* Recipe Icon/Image placeholder */}
           <div className="w-20 h-20 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden">
-            {recipe.id === "kimchi-stew-22cm" ? (
-              <img 
-                src="https://files.replit.com/uploads/attachments/b9cdb9e0-7f9d-47b5-b70d-fa58a9b6d7b8/image_1756541129157.png" 
-                alt="김치찌개" 
-                className="w-full h-full object-cover"
-              />
-            ) : (
-              <div className="w-full h-full bg-asran-amber/10 rounded-xl flex items-center justify-center">
-                <ChefHat className="w-8 h-8 text-asran-amber" />
-              </div>
-            )}
+            <div className="w-full h-full bg-asran-amber/10 rounded-xl flex items-center justify-center">
+              <ChefHat className="w-8 h-8 text-asran-amber" />
+            </div>
           </div>
           
           <div className="flex-1">

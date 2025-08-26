@@ -1,129 +1,238 @@
 [
   {
-    "id": "kimchi-stew-22cm",
-    "title": "기본 김치찌개",
-    "suitableProducts": ["asran-pot-3set"],
-    "bestWith": "22cm 양수냄비",
+    "id": "beef-seaweed-soup",
+    "title": "소고기 미역국",
+    "suitableProducts": ["asran-pressure-24"],
+    "bestWith": "압력솥",
     "difficulty": "초급",
     "timeMinutes": 25,
-    "servings": 2,
+    "servings": 4,
     "ingredients": [
-      "신김치 200g",
-      "돼지목살 150g",
-      "양파 1/2개",
-      "두부 1/2모",
-      "고춧가루 1.5T",
-      "간장 1T",
-      "다시다 또는 멸치육수 400ml"
+      "불린 미역 30g",
+      "소고기 양지 200g",
+      "국간장",
+      "참기름"
     ],
     "steps": [
-      "냄비에 기름을 두르고 돼지고기와 김치를 3분 볶아 풍미를 올린다.",
-      "물/육수 400ml와 양파를 넣고 중불 10분 끓인다.",
-      "두부를 넣고 고춧가루·간장으로 간을 맞추고 5분 더 끓인다."
+      "소고기와 참기름을 볶음 → 미역 투입.",
+      "물 1.5L 붓고 압력 10분 조리.",
+      "압력 해제 후 간 맞추기."
     ],
-    "tips": [
-      "바닥 3중 구조로 중불만으로 충분히 끓어 넘침을 줄입니다.",
-      "인덕션은 6~7단(중불) 권장."
-    ],
+    "tips": ["압력 후 5분 더 끓이면 국물 맛이 진해짐."],
     "schema": "Recipe",
     "createdAt": "2024-01-01T00:00:00.000Z"
   },
   {
-    "id": "steak-pan",
-    "title": "굽기 쉬운 팬 스테이크",
-    "suitableProducts": ["asran-frypan-28"],
-    "bestWith": "28cm 후라이팬",
-    "difficulty": "중급",
-    "timeMinutes": 15,
-    "servings": 2,
-    "ingredients": [
-      "등심 2장(2cm)",
-      "소금/후추",
-      "버터 20g",
-      "허브"
-    ],
-    "steps": [
-      "팬을 예열 후 소금·후추한 고기를 강불 1분씩 겉면 시어링.",
-      "중불로 낮춰 버터·허브 넣고 2~3분 베이스팅.",
-      "호일에 5분 레스팅."
-    ],
-    "tips": ["팬이 충분히 달궈진 뒤 올리면 들러붙음 방지."],
-    "schema": "Recipe",
-    "createdAt": "2024-01-01T00:00:00.000Z"
-  },
-  {
-    "id": "galbijjim-pressure",
-    "title": "압력솥 갈비찜",
+    "id": "braised-ribs",
+    "title": "갈비찜",
     "suitableProducts": ["asran-pressure-24"],
-    "bestWith": "24cm 압력솥",
+    "bestWith": "압력솥",
+    "difficulty": "중급",
+    "timeMinutes": 60,
+    "servings": 5,
+    "ingredients": [
+      "소갈비 1kg",
+      "무",
+      "당근",
+      "간장",
+      "배즙",
+      "마늘"
+    ],
+    "steps": [
+      "핏물 뺀 갈비를 양념장에 재움.",
+      "야채+양념+물 넣고 압력 25분 조리.",
+      "뚜껑 열고 농도 조절."
+    ],
+    "tips": ["하루 숙성 후 데우면 풍미가 깊어짐."],
+    "schema": "Recipe",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "chicken-ginseng-soup",
+    "title": "삼계탕",
+    "suitableProducts": ["asran-pressure-24"],
+    "bestWith": "압력솥",
+    "difficulty": "초급",
+    "timeMinutes": 40,
+    "servings": 4,
+    "ingredients": [
+      "영계 1마리",
+      "찹쌀",
+      "인삼",
+      "대추",
+      "마늘"
+    ],
+    "steps": [
+      "닭 속에 찹쌀+대추+마늘 넣음.",
+      "압력솥에 물 2L와 함께 20분 조리.",
+      "간 맞추고 끓이기."
+    ],
+    "tips": ["조리 전 거품 제거하면 국물이 맑아짐."],
+    "schema": "Recipe",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "curry-rice",
+    "title": "카레라이스",
+    "suitableProducts": ["asran-pressure-24"],
+    "bestWith": "압력솥",
+    "difficulty": "초급",
+    "timeMinutes": 25,
+    "servings": 4,
+    "ingredients": [
+      "닭/돼지고기 300g",
+      "감자",
+      "당근",
+      "양파",
+      "카레가루"
+    ],
+    "steps": [
+      "고기와 야채 볶기.",
+      "물 700ml 넣고 압력 5분 조리.",
+      "압력 해제 후 카레가루 넣고 끓이기."
+    ],
+    "tips": ["토마토를 추가하면 새콤한 맛이 가미됨."],
+    "schema": "Recipe",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "bean-stew",
+    "title": "콩조림",
+    "suitableProducts": ["asran-pressure-24"],
+    "bestWith": "압력솥",
+    "difficulty": "초급",
+    "timeMinutes": 35,
+    "servings": 6,
+    "ingredients": [
+      "검은콩 2컵",
+      "간장",
+      "설탕",
+      "물엿"
+    ],
+    "steps": [
+      "콩 불려 압력 15분 조리.",
+      "물 버리고 양념장에 졸이기."
+    ],
+    "tips": ["완전히 식히면 콩이 더 쫄깃해짐."],
+    "schema": "Recipe",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "pork-backbone-soup",
+    "title": "돼지등뼈 감자탕",
+    "suitableProducts": ["asran-pressure-24"],
+    "bestWith": "압력솥",
+    "difficulty": "중급",
+    "timeMinutes": 60,
+    "servings": 4,
+    "ingredients": [
+      "돼지등뼈 1kg",
+      "감자",
+      "시래기",
+      "된장",
+      "고춧가루"
+    ],
+    "steps": [
+      "등뼈 핏물 제거 후 압력 10분.",
+      "새 물+양념+감자 넣고 압력 15분.",
+      "시래기 넣고 추가 조리."
+    ],
+    "tips": ["들깨가루 넣으면 고소한 맛이 강화됨."],
+    "schema": "Recipe",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "chicken-braised",
+    "title": "닭볶음탕",
+    "suitableProducts": ["asran-pressure-24"],
+    "bestWith": "압력솥",
     "difficulty": "중급",
     "timeMinutes": 35,
     "servings": 4,
     "ingredients": [
-      "소갈비 1kg",
-      "간장 6T",
-      "설탕 2T",
-      "마늘 1T",
-      "배즙 100ml",
-      "물 400ml"
+      "닭 1kg",
+      "감자",
+      "당근",
+      "양파",
+      "고춧가루",
+      "고추장"
     ],
     "steps": [
-      "갈비 핏물 빼고 양념과 물을 넣는다.",
-      "압력추 회전 후 중불 20분, 잔압 제거 후 채소 넣고 5분 더 조림."
+      "닭과 양념 볶기.",
+      "채소+물 넣고 압력 10분 조리.",
+      "압력 해제 후 농도 조절."
     ],
-    "tips": ["압력 해제는 자연감압을 권장."],
+    "tips": ["청양고추 넣으면 매운맛 강화."],
     "schema": "Recipe",
     "createdAt": "2024-01-01T00:00:00.000Z"
   },
   {
-    "id": "pasta-pot",
-    "title": "봉골레 파스타",
-    "suitableProducts": ["asran-pot-3set", "asran-frypan-28"],
-    "bestWith": "22cm 양수냄비 + 28cm 팬",
-    "difficulty": "중급",
-    "timeMinutes": 20,
-    "servings": 2,
-    "ingredients": [
-      "스파게티 200g",
-      "바지락 300g",
-      "마늘 4쪽",
-      "올리브오일 4T",
-      "화이트와인 100ml",
-      "파슬리",
-      "소금/후추"
-    ],
-    "steps": [
-      "양수냄비에 물을 끓여 파스타를 al dente로 삶는다.",
-      "팬에 올리브오일, 마늘을 볶다가 바지락과 화이트와인 추가.",
-      "파스타와 파슬리를 넣고 1분간 버무린다."
-    ],
-    "tips": ["파스타 물은 짜지 않게, 바지락 국물이 간을 담당합니다."],
-    "schema": "Recipe",
-    "createdAt": "2024-01-01T00:00:00.000Z"
-  },
-  {
-    "id": "vegetable-prep-knife",
-    "title": "완벽한 채소 썰기 가이드",
-    "suitableProducts": ["asran-knife-board-set"],
-    "bestWith": "셰프나이프 20cm + 대나무 도마",
+    "id": "german-potato-stew",
+    "title": "감자스튜 (독일식 Eintopf)",
+    "suitableProducts": ["asran-pressure-24"],
+    "bestWith": "압력솥",
     "difficulty": "초급",
-    "timeMinutes": 10,
-    "servings": 1,
+    "timeMinutes": 30,
+    "servings": 4,
     "ingredients": [
-      "양파 1개",
-      "당근 1개",
-      "감자 2개",
-      "대파 2대"
+      "감자",
+      "소시지",
+      "당근",
+      "베이컨",
+      "양파"
     ],
     "steps": [
-      "도마를 안정적으로 놓고 논슬립 베이스를 확인한다.",
-      "셰프나이프로 양파는 반달 썰기, 당근은 어슷 썰기한다.",
-      "감자는 깍둑썰기, 대파는 송송 썰어 준비 완료."
+      "베이컨 볶고 야채 추가.",
+      "물+월계수잎 넣고 압력 8분.",
+      "소시지 추가 후 끓이기."
     ],
-    "tips": [
-      "항균 도마는 사용 후 찬물로 헹구세요.",
-      "칼날이 예리하니 안전하게 손가락을 보호하세요."
+    "tips": ["빵과 함께 곁들이면 정통 독일식 완성."],
+    "schema": "Recipe",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "boiled-pork",
+    "title": "보쌈용 수육",
+    "suitableProducts": ["asran-pressure-24"],
+    "bestWith": "압력솥",
+    "difficulty": "초급",
+    "timeMinutes": 50,
+    "servings": 4,
+    "ingredients": [
+      "돼지고기 앞다리살 1kg",
+      "된장",
+      "마늘",
+      "양파"
     ],
+    "steps": [
+      "고기+양념+물 넣고 압력 20분.",
+      "익힌 후 썰어 내기."
+    ],
+    "tips": ["삶은 국물은 국수 육수로 활용 가능."],
+    "schema": "Recipe",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "pressure-cooker-cheesecake",
+    "title": "압력솥 치즈케이크",
+    "suitableProducts": ["asran-pressure-24"],
+    "bestWith": "압력솥",
+    "difficulty": "고급",
+    "timeMinutes": 60,
+    "servings": 6,
+    "ingredients": [
+      "크림치즈 200g",
+      "설탕",
+      "계란 2개",
+      "생크림",
+      "밀가루"
+    ],
+    "steps": [
+      "재료 섞어 틀에 붓기.",
+      "압력솥에 찜틀+물 넣고 약불 25분 조리.",
+      "식힌 후 냉장 숙성."
+    ],
+    "tips": ["하루 숙성 후 먹으면 풍미가 배가됨."],
     "schema": "Recipe",
     "createdAt": "2024-01-01T00:00:00.000Z"
   }
