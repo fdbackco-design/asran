@@ -30,7 +30,10 @@ export default function Header() {
   const cartItemCount = items.reduce((total, item) => total + item.quantity, 0);
 
   return (
-    <header className="bg-white shadow-sm border-b sticky top-0 z-50" data-testid="header">
+    <header
+      className="bg-white shadow-sm border-b sticky top-0 z-50"
+      data-testid="header"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -73,23 +76,6 @@ export default function Header() {
                 </Button>
               )}
             </div>
-
-            {/* Cart */}
-            <Link href="/cart" className="relative">
-              <Button variant="ghost" size="sm" data-testid="button-cart">
-                <ShoppingCart className="w-6 h-6" />
-                {cartItemCount > 0 && (
-                  <span 
-                    className="absolute -top-1 -right-1 bg-asran-red text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
-                    data-testid="text-cart-count"
-                  >
-                    {cartItemCount}
-                  </span>
-                )}
-              </Button>
-            </Link>
-
-            
           </div>
         </div>
 
