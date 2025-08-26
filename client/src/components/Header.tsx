@@ -15,7 +15,7 @@ export default function Header() {
   const { items } = useCart();
 
   const navigation = [
-    { name: "제품", href: "/products", hasDropdown: true },
+    { name: "제품", href: "/categories", hasDropdown: true },
     { name: "레시피", href: "/blog" },
     { name: "브랜드 소개", href: "/about" },
     { name: "고객 후기", href: "/reviews" },
@@ -55,19 +55,20 @@ export default function Header() {
             {navigation.map((item) => (
               item.hasDropdown ? (
                 <div key={item.name} className="relative group">
-                  <button
+                  <Link
+                    href={item.href}
                     className={`flex items-center transition-colors font-medium ${
-                      isActive(item.href)
+                      isActive(item.href) || isActive("/products")
                         ? "text-asran-gray"
                         : "text-gray-600 hover:text-asran-amber"
                     }`}
                     onMouseEnter={() => setIsProductDropdownOpen(true)}
                     onMouseLeave={() => setIsProductDropdownOpen(false)}
-                    data-testid={`button-${item.name.toLowerCase()}`}
+                    data-testid={`link-${item.name.toLowerCase()}`}
                   >
                     {item.name}
                     <ChevronDown className="w-4 h-4 ml-1" />
-                  </button>
+                  </Link>
                   
                   {/* Dropdown Menu */}
                   {isProductDropdownOpen && (
@@ -76,6 +77,13 @@ export default function Header() {
                       onMouseEnter={() => setIsProductDropdownOpen(true)}
                       onMouseLeave={() => setIsProductDropdownOpen(false)}
                     >
+                      <Link
+                        href="/categories"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-asran-amber font-medium border-b border-gray-100"
+                        onClick={() => setIsProductDropdownOpen(false)}
+                      >
+                        제품 카테고리
+                      </Link>
                       <Link
                         href="/products"
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-asran-amber font-medium border-b border-gray-100"

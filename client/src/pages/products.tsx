@@ -41,7 +41,16 @@ export default function Products() {
       ? `"${search}" 관련 아슬란 주방용품 검색 결과입니다.`
       : "독일 기술력의 프리미엄 주방용품 전체 카탈로그. 냄비, 후라이팬, 압력솥 등 다양한 제품을 만나보세요.";
 
-    updateSEO({ title, description, keywords: `아슬란, 주방용품, ${category}, ${search}` });
+    updateSEO({ 
+      title, 
+      description, 
+      keywords: `아슬란, 주방용품, ${category}, ${search}`,
+      openGraph: {
+        title,
+        description,
+        type: "website"
+      }
+    });
   }, [category, search]);
 
   // Fetch products
@@ -109,7 +118,7 @@ export default function Products() {
                   <SelectValue placeholder="모든 카테고리" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">모든 카테고리</SelectItem>
+                  <SelectItem value="all">모든 카테고리</SelectItem>
                   {categories.map((cat) => (
                     <SelectItem key={cat} value={cat}>{cat}</SelectItem>
                   ))}

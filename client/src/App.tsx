@@ -7,6 +7,7 @@ import { CartProvider } from "@/hooks/use-cart";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Home from "@/pages/home";
+import Categories from "@/pages/categories";
 import Products from "@/pages/products";
 import ProductDetail from "@/pages/product-detail";
 import About from "@/pages/about";
@@ -24,6 +25,7 @@ function Router() {
       <main className="flex-1">
         <Switch>
           <Route path="/" component={Home} />
+          <Route path="/categories" component={Categories} />
           <Route path="/products" component={Products} />
           <Route path="/products/:slug" component={ProductDetail} />
           <Route path="/about" component={About} />

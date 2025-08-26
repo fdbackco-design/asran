@@ -1,6 +1,7 @@
 const CACHE_NAME = 'asran-v1.0.0';
 const urlsToCache = [
   '/',
+  '/categories',
   '/products',
   '/blog',
   '/about',
