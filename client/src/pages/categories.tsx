@@ -91,12 +91,10 @@ export default function Categories() {
           </h1>
           <div className="w-24 h-1 bg-asran-amber mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-4">
-            혁신적인 기술과 디자인을 바탕으로 한 FeedBack의 저희 브랜드들을
-            소개합니다.
+            혁신적인 기술과 디자인을 바탕으로 한 ASRAN 브랜드의 제품을 소개합니다.
           </p>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            각 브랜드는 고유한 가치와 비전을 가지고 고객에게 최고의 경험을
-            제공합니다.
+            각 제품은 독일의 기술력을 바탕으로 제작된 장인정신이 담긴 제품입니다.
           </p>
         </div>
       </div>
