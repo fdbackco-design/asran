@@ -173,14 +173,6 @@ export default function Categories() {
             바탕으로 만들어집니다. 당신의 주방을 더욱 특별하게 만들어보세요.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/products">
-              <Button
-                className="bg-asran-amber hover:bg-yellow-500 text-asran-gray font-semibold px-8 py-3"
-                data-testid="button-all-products"
-              >
-                전체 제품 보기
-              </Button>
-            </Link>
             <Link href="/blog">
               <Button
                 variant="outline"
