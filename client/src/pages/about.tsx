@@ -232,56 +232,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Company Info */}
-      <section className="py-16 lg:py-24" data-testid="company-info-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-asran-gray mb-6">회사 정보</h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                label: "설립년도",
-                value: "2010년"
-              },
-              {
-                label: "본사 위치",
-                value: "독일 뒤셀도르프"
-              },
-              {
-                label: "한국 지사",
-                value: "서울특별시 강남구"
-              },
-              {
-                label: "직원 수",
-                value: "180명"
-              },
-              {
-                label: "제품 라인",
-                value: "5개 카테고리"
-              },
-              {
-                label: "연간 생산량",
-                value: "50만개"
-              },
-              {
-                label: "품질 인증",
-                value: "12개 국제 인증"
-              },
-              {
-                label: "고객 만족도",
-                value: "93.7%"
-              }
-            ].map((info, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl font-bold text-asran-amber mb-2">{info.value}</div>
-                <div className="text-gray-600">{info.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </div>
+      </div>
   );
 }
