@@ -170,9 +170,11 @@ export default function About() {
                   </div>
                 </div>
                 <div className={`lg:w-1/2 ${index % 2 === 1 ? "lg:order-1" : ""}`}>
-                  <div className="bg-gray-200 h-64 rounded-2xl flex items-center justify-center">
-                    <span className="text-gray-500 text-lg">제조 과정 {process.step} 이미지</span>
-                  </div>
+                  <img
+                    src={`/brand/${index + 1}.jpg`}
+                    alt={`제조 과정 ${process.step} - ${process.title}`}
+                    className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                  />
                 </div>
               </div>
             ))}
