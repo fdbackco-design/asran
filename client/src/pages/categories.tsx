@@ -92,10 +92,10 @@ export default function Categories() {
             ASRAN 제품 카테고리
           </h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-10">
             {categories.map((category) => (
               <Card key={category.id} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg overflow-hidden" data-testid={`card-category-${category.id}`}>
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-80 overflow-hidden">
                   <img
                     src={category.image}
                     alt={category.name}
@@ -107,7 +107,7 @@ export default function Categories() {
                   </div>
                 </div>
                 
-                <CardContent className="p-6">
+                <CardContent className="p-8">
                   <h3 className="text-xl font-bold text-asran-gray mb-3 group-hover:text-asran-amber transition-colors">
                     {category.name}
                   </h3>
