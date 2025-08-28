@@ -85,57 +85,8 @@ export default function Categories() {
         </div>
       </div>
 
-      {/* Brand Section */}
+      {/* Categories Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
-          {/* Brand Info */}
-          <div>
-            <div className="text-6xl font-bold text-asran-gray mb-4" style={{ fontFamily: 'Arial, sans-serif' }}>
-              ASRAN
-            </div>
-            <div className="text-xl text-asran-amber mb-8 font-medium">
-              독일 기술력
-            </div>
-            <div className="text-xl text-asran-gray mb-8 font-medium">
-              공기 속까지 바뀌는 디자인
-            </div>
-            <div className="text-gray-600 leading-relaxed mb-8 space-y-4">
-              <p>
-                공기청정기, 제습기 등 미니멀한 디자인과 첨단 기술이 만나 일상의 공기
-                질을 혁신하는 스마트 가전 브랜드입니다. 출소하고 해외진출을 통해 글로
-                벌 시장에서 인정받고 있습니다.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3 mb-8">
-              <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                공기청정기
-              </span>
-              <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                제습기
-              </span>
-              <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                3-in-1 기능
-              </span>
-              <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                HEPA14 필터
-              </span>
-            </div>
-            <Link href="/products">
-              <Button className="bg-asran-amber hover:bg-yellow-500 text-asran-gray font-semibold px-8 py-3 rounded-lg transition-colors" data-testid="button-view-products">
-                ASRAN 브랜드 자세히 보기 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-          </div>
-
-          {/* Brand Image */}
-          <div className="relative">
-            <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl p-8 h-96 flex items-center justify-center">
-              <div className="text-8xl text-gray-400">📱</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Categories Section */}
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-asran-gray text-center mb-12">
             ASRAN 제품 카테고리
