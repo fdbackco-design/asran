@@ -149,20 +149,6 @@ export default function Home() {
               {featuredProducts.map((product: Product) => (
                 <ProductCard key={product.id} product={product} />
               ))}
-              
-              {/* Special Offers Card */}
-              <Card className="group cursor-pointer hover:shadow-2xl asran-hover-lift md:col-span-2 lg:col-span-1">
-                <CardContent className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-asran-amber to-yellow-500 text-asran-gray h-full flex flex-col justify-center p-8">
-                  <div className="text-center">
-                    <CheckCircle className="w-16 h-16 mx-auto mb-4 opacity-80" />
-                    <h3 className="text-2xl font-bold mb-4">전 제품 무료배송</h3>
-                    <p className="text-lg mb-6">50,000원 이상 구매 시<br />전국 무료배송 서비스</p>
-                    <div className="bg-white bg-opacity-20 rounded-lg p-3">
-                      <p className="font-semibold">+ 30일 무조건 교환/환불</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           )}
 
