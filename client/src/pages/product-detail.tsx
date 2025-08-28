@@ -204,33 +204,7 @@ export default function ProductDetail() {
             />
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="p-6">
-              <h3 className="text-xl font-semibold text-asran-gray mb-4">제품 사양</h3>
-              <div className="space-y-3">
-                {Object.entries(product.specs).map(([key, value]) => (
-                  <div key={key} className="flex justify-between">
-                    <span className="text-gray-600 capitalize">{key}:</span>
-                    <span className="font-medium text-asran-gray">
-                      {Array.isArray(value) ? value.join(", ") : value}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </Card>
-            
-            <Card className="p-6">
-              <h3 className="text-xl font-semibold text-asran-gray mb-4">호환성</h3>
-              <div className="grid grid-cols-2 gap-3">
-                {product.specs.compatible?.map((type: string) => (
-                  <div key={type} className="flex items-center space-x-2">
-                    <Check className="w-4 h-4 text-green-600" />
-                    <span className="text-sm">{type}</span>
-                  </div>
-                ))}
-              </div>
-            </Card>
-          </div>
+          
         </div>
 
         {/* Recipe Recommendations */}
