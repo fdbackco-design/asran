@@ -147,53 +147,27 @@ export default function ProductDetail() {
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">
-                <div className="text-3xl font-bold text-asran-gray mb-2">
-                  {product.price.toLocaleString()}원
-                </div>
-                <p className="text-sm text-gray-600 mb-4">부가세 포함 • 무료배송</p>
-                
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="flex items-center space-x-2">
-                    <label className="text-sm font-medium text-gray-700">수량:</label>
-                    <div className="flex items-center border border-gray-300 rounded">
-                      <button
-                        onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                        className="px-3 py-1 text-gray-600 hover:bg-gray-100"
-                      >
-                        -
-                      </button>
-                      <span className="px-4 py-1 border-x border-gray-300">{quantity}</span>
-                      <button
-                        onClick={() => setQuantity(quantity + 1)}
-                        className="px-3 py-1 text-gray-600 hover:bg-gray-100"
-                      >
-                        +
-                      </button>
+                <h3 className="text-xl font-semibold text-asran-gray mb-4">더 많은 제품 특징</h3>
+                <div className="grid grid-cols-1 gap-4">
+                  {product.usp.map((feature, index) => (
+                    <div key={index} className="flex items-start space-x-3 p-3 bg-white rounded-lg">
+                      <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <span className="text-sm font-medium text-asran-gray">{feature}</span>
+                        <p className="text-xs text-gray-500 mt-1">
+                          {index === 0 && "최고급 독일 기술로 제작된 프리미엄 품질"}
+                          {index === 1 && "뛰어난 열전도와 보온성을 자랑하는 3중 구조"}
+                          {index === 2 && "모든 종류의 쿡탑에서 사용 가능"}
+                          {index === 3 && "사용과 보관이 편리한 경량 설계"}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </div>
-
-                <div className="flex space-x-3">
-                  <Button
-                    onClick={handleAddToCart}
-                    className="flex-1 bg-asran-amber hover:bg-yellow-500 text-asran-gray font-semibold py-3"
-                  >
-                    <ShoppingCart className="w-4 h-4 mr-2" />
-                    장바구니 담기
-                  </Button>
-                  <Button variant="outline" className="px-6 border-asran-gray text-asran-gray hover:bg-asran-gray hover:text-white">
-                    <Heart className="w-4 h-4" />
-                  </Button>
+                  ))}
                 </div>
               </div>
 
-              {/* Service Features */}
+              {/* Quality Features */}
               <div className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-200">
-                <div className="text-center">
-                  <Truck className="w-6 h-6 text-asran-amber mx-auto mb-2" />
-                  <p className="text-sm font-medium text-gray-900">무료배송</p>
-                  <p className="text-xs text-gray-500">5만원 이상</p>
-                </div>
                 <div className="text-center">
                   <Shield className="w-6 h-6 text-asran-amber mx-auto mb-2" />
                   <p className="text-sm font-medium text-gray-900">품질보증</p>
@@ -203,6 +177,11 @@ export default function ProductDetail() {
                   <Award className="w-6 h-6 text-asran-amber mx-auto mb-2" />
                   <p className="text-sm font-medium text-gray-900">독일 기술</p>
                   <p className="text-xs text-gray-500">프리미엄 품질</p>
+                </div>
+                <div className="text-center">
+                  <Check className="w-6 h-6 text-asran-amber mx-auto mb-2" />
+                  <p className="text-sm font-medium text-gray-900">안전 인증</p>
+                  <p className="text-xs text-gray-500">KC 인증 완료</p>
                 </div>
               </div>
             </div>
