@@ -30,6 +30,7 @@ export default function Categories() {
       features: ["3중 바닥구조", "인덕션 호환", "균일한 열전도"],
       image: "/pot/title.jpeg",
       category: "냄비 3종 세트",
+      productSlug: "asran-pot-3set",
       productCount: 1,
     },
     {
@@ -40,6 +41,7 @@ export default function Categories() {
       image:
         "https://images.unsplash.com/photo-1556909045-4d394c0e6ad8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
       category: "후라이팬",
+      productSlug: "asran-frypan-28",
       productCount: 1,
     },
     {
@@ -50,6 +52,7 @@ export default function Categories() {
       image:
         "https://images.unsplash.com/photo-1593618998160-e34014e67546?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
       category: "칼&도마",
+      productSlug: "asran-knife-board-set",
       productCount: 1,
     },
     {
@@ -59,6 +62,7 @@ export default function Categories() {
       features: ["다중 안전장치", "빠른 조리", "영양소 보존"],
       image: "/pressure/cut.jpeg",
       category: "압력솥",
+      productSlug: "asran-pressure-24",
       productCount: 1,
     },
     {
@@ -69,6 +73,7 @@ export default function Categories() {
       image:
         "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
       category: "수저세트",
+      productSlug: "asran-cutlery-set",
       productCount: 1,
     },
   ];
@@ -143,7 +148,7 @@ export default function Categories() {
                   </div>
 
                   <Link
-                    href={`/products?category=${encodeURIComponent(category.category)}`}
+                    href={`/products/${category.productSlug}`}
                   >
                     <Button
                       className="w-full bg-asran-amber hover:bg-yellow-500 text-asran-gray font-medium transition-colors group"
