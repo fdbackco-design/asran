@@ -67,7 +67,7 @@ export default function Support() {
         <div className="text-center mb-12">
           <h1 className="text-3xl lg:text-4xl font-bold text-asran-gray mb-6">고객센터</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            궁금한 점이 있으시다면 FAQ를 먼저 확인해보시거나, 1:1 문의를 통해 도움을 받으세요
+            궁금한 점이 있으시다면 FAQ를 확인해보세요
           </p>
         </div>
 
