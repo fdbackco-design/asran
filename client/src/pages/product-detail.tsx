@@ -194,6 +194,16 @@ export default function ProductDetail() {
         {/* Product Specifications */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-asran-gray text-center mb-12">제품 상세 정보</h2>
+          
+          {/* Detail Image */}
+          <div className="mb-12">
+            <img
+              src="/pot/detail.png"
+              alt="제품 상세 정보"
+              className="w-full max-w-4xl mx-auto rounded-lg shadow-lg"
+            />
+          </div>
+          
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="p-6">
               <h3 className="text-xl font-semibold text-asran-gray mb-4">제품 사양</h3>
