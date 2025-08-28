@@ -86,22 +86,7 @@ export default function ProductCard({ product, className }: ProductCardProps) {
             </span>
           </div>
           
-          {/* Price and CTA */}
-          <div className="flex items-center justify-between">
-            <span className="text-2xl font-bold text-asran-gray" data-testid={`text-price-${product.slug}`}>
-              ₩{product.price.toLocaleString()}
-            </span>
-            <Button
-              onClick={handleAddToCart}
-              className="bg-asran-amber hover:bg-yellow-500 text-asran-gray"
-              size="sm"
-              data-testid={`button-add-cart-${product.slug}`}
-            >
-              <ShoppingCart className="w-4 h-4 mr-1" />
-              장바구니
-            </Button>
-          </div>
-        </CardContent>
+          </CardContent>
       </Link>
     </Card>
   );
