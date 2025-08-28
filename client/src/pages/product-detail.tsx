@@ -242,20 +242,7 @@ export default function ProductDetail() {
           </div>
         )}
 
-        {/* Customer Support */}
-        <div className="bg-gray-50 rounded-2xl p-8 text-center">
-          <h2 className="text-2xl font-bold text-asran-gray mb-4">궁금한 점이 있으신가요?</h2>
-          <p className="text-gray-600 mb-6">전문 상담사가 친절하게 안내해드립니다</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-asran-amber hover:bg-yellow-500 text-asran-gray">
-              <Phone className="w-4 h-4 mr-2" />
-              전화 상담: 1588-1234
-            </Button>
-            <Button variant="outline" className="border-asran-gray text-asran-gray hover:bg-asran-gray hover:text-white">
-              온라인 문의하기
-            </Button>
-          </div>
-        </div>
+        
       </div>
     </div>
   );
