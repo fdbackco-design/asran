@@ -153,7 +153,7 @@ export default function Home() {
           )}
 
           <div className="text-center mt-12">
-            <Link href="/products">
+            <Link href="/categories">
               <Button 
                 className="bg-asran-gray hover:bg-gray-800 text-white px-8 py-4 text-lg"
                 data-testid="button-view-all-products"
