@@ -7,8 +7,11 @@
     "price": 99000,
     "usp": ["독일 기술", "SUS410 3중 바닥", "인덕션/가스 호환", "경량"],
     "images": [
-      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      "https://pixabay.com/get/g2b9cb6e03342d740155e406239b386b692b151b0fdf2877d6324a11bf23b6580455b7f4efe326f8c4b59d3b2b6d67a12ce06ba2eb06e6063f86e355ce91a81a0_1280.jpg"
+      "/pot/detail-page.jpg",
+      "/pot/title.jpeg",
+      "/pot/image_Pippit_202507291037 (6).jpeg",
+      "/pot/image_Pippit_202507291037 (7).jpeg",
+      "/pot/image_Pippit_202507291037 (8).jpeg"
     ],
     "rating": 4.87,
     "reviewCount": 523,
