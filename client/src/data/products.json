@@ -49,9 +49,7 @@
     "slug": "asran-pressure-24",
     "price": 129000,
     "usp": ["안전 밸브", "시간 단축", "독일 안전 기준", "다중 안전장치"],
-    "images": [
-      "https://pixabay.com/get/gf9566fe2d8536254ae63a1dbedaab0d415c983d8ae2d14e7903077ae625f339f91d56ab5908d980487f0b61e2214a6574b1bbcfdbef4ba8ac131dd70c90ef5d0_1280.jpg"
-    ],
+    "images": ["/pressure/cut.jpeg"],
     "rating": 4.85,
     "reviewCount": 298,
     "specs": {
