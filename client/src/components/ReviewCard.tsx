@@ -68,7 +68,11 @@ export default function ReviewCard({ review, showProduct = false, className }: R
         <div className="flex items-center justify-between">
           {showProduct && (
             <Badge variant="outline" className="text-asran-amber border-asran-amber">
-              {review.productId}
+              {review.productId === 'asran-pot-3set' && '아슬란 냄비 3종 세트'}
+              {review.productId === 'asran-frypan-28' && '아슬란 후라이팬 28cm'}
+              {review.productId === 'asran-pressure-24' && '아슬란 압력솥 24cm'}
+              {review.productId === 'asran-knife-board-set' && '아슬란 칼 & 도마 세트'}
+              {review.productId === 'asran-cutlery-set' && '아슬란 수저 세트'}
             </Badge>
           )}
           <div className="flex items-center space-x-2">
