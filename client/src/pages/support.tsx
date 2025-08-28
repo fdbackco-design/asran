@@ -71,39 +71,9 @@ export default function Support() {
           </p>
         </div>
 
-        {/* Quick Contact */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          <Card className="text-center hover:shadow-lg transition-shadow">
-            <CardContent className="p-6">
-              <Phone className="w-12 h-12 text-asran-amber mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-asran-gray mb-2">전화 문의</h3>
-              <p className="text-gray-600 mb-2">02-1234-5678</p>
-              <p className="text-sm text-gray-500">평일 9:00-18:00</p>
-            </CardContent>
-          </Card>
-
-          <Card className="text-center hover:shadow-lg transition-shadow">
-            <CardContent className="p-6">
-              <MessageCircle className="w-12 h-12 text-asran-amber mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-asran-gray mb-2">1:1 문의</h3>
-              <p className="text-gray-600 mb-2">온라인 문의</p>
-              <p className="text-sm text-gray-500">평균 2시간 내 답변</p>
-            </CardContent>
-          </Card>
-
-          <Card className="text-center hover:shadow-lg transition-shadow">
-            <CardContent className="p-6">
-              <Mail className="w-12 h-12 text-asran-amber mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-asran-gray mb-2">이메일 문의</h3>
-              <p className="text-gray-600 mb-2">support@asran.co.kr</p>
-              <p className="text-sm text-gray-500">평일 24시간 내 답변</p>
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className="grid lg:grid-cols-3 gap-12">
-          {/* FAQ Section */}
-          <div className="lg:col-span-2">
+        {/* FAQ Section */}
+        <div className="w-full">
+          <div className="w-full">
             <Card>
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-asran-gray flex items-center">
@@ -238,11 +208,6 @@ export default function Support() {
                 )}
               </CardContent>
             </Card>
-          </div>
-
-          {/* Customer Service Form */}
-          <div>
-            <CustomerServiceForm />
           </div>
         </div>
       </div>
