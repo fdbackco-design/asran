@@ -25,7 +25,7 @@ export default function Categories() {
       name: "냄비 3종",
       description: "독일 기술력으로 완성된 프리미엄 냄비 세트",
       features: ["3중 바닥구조", "인덕션 호환", "균일한 열전도"],
-      image: "https://images.unsplash.com/photo-1556909114-4c3b8c9b5179?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      image: "/attached_assets/image_Pippit_202507291101_1756372107876.jpeg",
       category: "냄비 3종 세트",
       productCount: 1
     },
