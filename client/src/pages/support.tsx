@@ -243,36 +243,6 @@ export default function Support() {
           {/* Customer Service Form */}
           <div>
             <CustomerServiceForm />
-
-            {/* Operating Hours */}
-            <Card className="mt-6">
-              <CardHeader>
-                <CardTitle className="text-lg font-semibold text-asran-gray flex items-center">
-                  <Clock className="w-5 h-5 mr-2" />
-                  운영 시간
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex justify-between">
-                  <span className="text-gray-600">평일</span>
-                  <span className="font-medium">09:00 - 18:00</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">토요일</span>
-                  <span className="font-medium">09:00 - 15:00</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">일요일/공휴일</span>
-                  <span className="font-medium text-red-600">휴무</span>
-                </div>
-                <div className="pt-4 border-t border-gray-200">
-                  <p className="text-sm text-gray-600">
-                    점심시간: 12:00 - 13:00<br />
-                    1:1 문의는 24시간 접수 가능하며, 순차적으로 답변드립니다.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>
