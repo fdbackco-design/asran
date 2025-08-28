@@ -108,57 +108,49 @@ export default function Categories() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-10">
             {categories.map((category) => (
-              <Card
+              <Link
                 key={category.id}
-                className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg overflow-hidden"
-                data-testid={`card-category-${category.id}`}
+                href={`/products/${category.productSlug}`}
+                className="block"
               >
-                <div className="relative h-80 overflow-hidden">
-                  <img
-                    src={category.image}
-                    alt={category.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition-opacity duration-300"></div>
-                  <div className="absolute top-4 right-4 bg-white rounded-full px-3 py-1 text-sm font-medium text-asran-gray">
-                    {category.productCount}개 제품
-                  </div>
-                </div>
-
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold text-asran-gray mb-3 group-hover:text-asran-amber transition-colors">
-                    {category.name}
-                  </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    {category.description}
-                  </p>
-
-                  <div className="space-y-2 mb-6">
-                    {category.features.map((feature, index) => (
-                      <div
-                        key={index}
-                        className="flex items-center text-sm text-gray-500"
-                      >
-                        <div className="w-1.5 h-1.5 bg-asran-amber rounded-full mr-2"></div>
-                        {feature}
-                      </div>
-                    ))}
+                <Card
+                  className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg overflow-hidden cursor-pointer"
+                  data-testid={`card-category-${category.id}`}
+                >
+                  <div className="relative h-80 overflow-hidden">
+                    <img
+                      src={category.image}
+                      alt={category.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition-opacity duration-300"></div>
+                    <div className="absolute top-4 right-4 bg-white rounded-full px-3 py-1 text-sm font-medium text-asran-gray">
+                      {category.productCount}개 제품
+                    </div>
                   </div>
 
-                  <Link
-                    href={`/products/${category.productSlug}`}
-                  >
-                    <Button
-                      className="w-full bg-asran-amber hover:bg-yellow-500 text-asran-gray font-medium transition-colors group"
-                      data-testid={`button-view-${category.id}`}
-                    >
-                      <ShoppingCart className="mr-2 h-4 w-4" />
-                      제품 보기
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
+                  <CardContent className="p-8">
+                    <h3 className="text-xl font-bold text-asran-gray mb-3 group-hover:text-asran-amber transition-colors">
+                      {category.name}
+                    </h3>
+                    <p className="text-gray-600 mb-4 leading-relaxed">
+                      {category.description}
+                    </p>
+
+                    <div className="space-y-2">
+                      {category.features.map((feature, index) => (
+                        <div
+                          key={index}
+                          className="flex items-center text-sm text-gray-500"
+                        >
+                          <div className="w-1.5 h-1.5 bg-asran-amber rounded-full mr-2"></div>
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
