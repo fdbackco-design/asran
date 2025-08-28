@@ -46,7 +46,7 @@ export default function SearchBox({ onClose, className }: SearchBoxProps) {
       <div className="relative">
         <Input
           type="text"
-          placeholder="김치찌개, 파스타, 스테이크..."
+          placeholder="압력솥, 냄비..."
           value={query}
           onChange={(e) => {
             setQuery(e.target.value);
