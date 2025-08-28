@@ -212,6 +212,14 @@ export default function Home() {
                       placeholder="요리명, 재료, 조리법을 검색하세요..."
                       className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl text-lg"
                       data-testid="input-recipe-search"
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                          const query = e.currentTarget.value.trim();
+                          if (query) {
+                            window.location.href = `/blog?search=${encodeURIComponent(query)}`;
+                          }
+                        }
+                      }}
                     />
                     <Search className="w-6 h-6 text-gray-400 absolute left-4 top-4" />
                   </div>
@@ -226,6 +234,9 @@ export default function Home() {
                           size="sm"
                           className="hover:bg-asran-amber hover:text-white hover:border-asran-amber"
                           data-testid={`button-tag-${tag}`}
+                          onClick={() => {
+                            window.location.href = `/blog?search=${encodeURIComponent(tag)}`;
+                          }}
                         >
                           #{tag}
                         </Button>
