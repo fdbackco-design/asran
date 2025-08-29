@@ -398,9 +398,6 @@ export default function Blog() {
                         <p className="font-medium text-asran-amber">{selectedRecipe.bestWith}</p>
                       </div>
                       <div className="flex space-x-2">
-                        <Button variant="outline" data-testid="button-share-recipe">
-                          공유하기
-                        </Button>
                         <Button className="bg-asran-amber hover:bg-yellow-500 text-asran-gray" data-testid="button-view-products">
                           추천 제품 보기
                         </Button>
