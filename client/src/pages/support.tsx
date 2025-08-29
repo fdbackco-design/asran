@@ -66,6 +66,10 @@ export default function Support() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-3xl lg:text-4xl font-bold text-asran-gray mb-6">고객센터</h1>
+          <div className="flex items-center justify-center mb-4">
+            <Phone className="w-5 h-5 text-asran-amber mr-2" />
+            <span className="text-xl font-semibold text-asran-gray">031-429-8570</span>
+          </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             궁금한 점이 있으시다면 FAQ를 확인해보세요
           </p>
