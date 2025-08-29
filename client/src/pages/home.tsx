@@ -72,7 +72,7 @@ export default function Home() {
         <div className="absolute bottom-4 left-4 sm:bottom-8 sm:left-32">
           <Link href="/products/asran-pot-3set">
             <Button
-              className="bg-asran-amber hover:bg-yellow-500 text-asran-gray px-3 py-1.5 text-xs sm:px-8 sm:py-4 sm:text-lg font-semibold shadow-lg"
+              className="bg-asran-amber hover:bg-yellow-500 text-asran-gray px-1.5 py-1 text-[10px] sm:px-8 sm:py-4 sm:text-lg font-semibold shadow-lg"
               data-testid="button-view-pot-set"
             >
               제품 보러가기
