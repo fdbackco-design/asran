@@ -59,26 +59,6 @@ export default function Footer() {
                   자주 묻는 질문
                 </Link>
               </li>
-              <li>
-                <Link href="/support" className="text-gray-300 hover:text-asran-amber transition-colors">
-                  배송 정보
-                </Link>
-              </li>
-              <li>
-                <Link href="/support" className="text-gray-300 hover:text-asran-amber transition-colors">
-                  교환/환불
-                </Link>
-              </li>
-              <li>
-                <Link href="/support" className="text-gray-300 hover:text-asran-amber transition-colors">
-                  1:1 문의
-                </Link>
-              </li>
-              <li>
-                <Link href="/support" className="text-gray-300 hover:text-asran-amber transition-colors">
-                  A/S 신청
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
