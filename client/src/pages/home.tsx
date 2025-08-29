@@ -29,7 +29,7 @@ export default function Home() {
       const response = await fetch("/api/products");
       const products = await response.json();
       const reviewPromises = products.map((product: Product) =>
-        fetch(`/api/reviews/${product.id}`).then(res => res.json())
+        fetch(`/api/reviews/${product.id}`).then((res) => res.json()),
       );
       const reviewsArrays = await Promise.all(reviewPromises);
       return reviewsArrays.flat();
@@ -49,9 +49,13 @@ export default function Home() {
   const featuredReviews = allReviews.slice(0, 3);
 
   // Calculate review statistics
-  const averageRating = allReviews.length > 0 
-    ? allReviews.reduce((sum: number, review: Review) => sum + review.rating, 0) / allReviews.length 
-    : 4.87;
+  const averageRating =
+    allReviews.length > 0
+      ? allReviews.reduce(
+          (sum: number, review: Review) => sum + review.rating,
+          0,
+        ) / allReviews.length
+      : 4.87;
   const totalReviews = allReviews.length || 523;
   const satisfactionRate = 93.7;
 
@@ -60,7 +64,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative" data-testid="hero-section">
         <img
-          src="/hero-banner.png"
+          src="/asranbanner1.png"
           alt="아슬란 주방용품"
           className="w-full h-auto"
           data-testid="hero-image"
@@ -68,12 +72,18 @@ export default function Home() {
       </section>
 
       {/* Product Categories */}
-      <section className="py-16 lg:py-24" data-testid="product-categories-section">
+      <section
+        className="py-16 lg:py-24"
+        data-testid="product-categories-section"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-asran-gray mb-6">프리미엄 주방용품 컬렉션</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-asran-gray mb-6">
+              프리미엄 주방용품 컬렉션
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              독일 기술력으로 제작된 아슬란의 주방용품으로 요리의 새로운 차원을 경험하세요
+              독일 기술력으로 제작된 아슬란의 주방용품으로 요리의 새로운 차원을
+              경험하세요
             </p>
           </div>
 
@@ -98,7 +108,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <Link href="/categories">
-              <Button 
+              <Button
                 className="bg-asran-gray hover:bg-gray-800 text-white px-8 py-4 text-lg"
                 data-testid="button-view-all-products"
               >
@@ -110,12 +120,18 @@ export default function Home() {
       </section>
 
       {/* Recipe Integration */}
-      <section className="py-16 lg:py-24 bg-gray-50" data-testid="recipe-integration-section">
+      <section
+        className="py-16 lg:py-24 bg-gray-50"
+        data-testid="recipe-integration-section"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-asran-gray mb-6">레시피와 함께하는 완벽한 요리</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-asran-gray mb-6">
+              레시피와 함께하는 완벽한 요리
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              각 제품에 최적화된 레시피로 누구나 쉽게 맛있는 요리를 만들 수 있습니다
+              각 제품에 최적화된 레시피로 누구나 쉽게 맛있는 요리를 만들 수
+              있습니다
             </p>
           </div>
 
@@ -124,7 +140,10 @@ export default function Home() {
               {recipesLoading ? (
                 <div className="space-y-8">
                   {Array.from({ length: 3 }).map((_, i) => (
-                    <div key={i} className="animate-pulse bg-white rounded-2xl p-6">
+                    <div
+                      key={i}
+                      className="animate-pulse bg-white rounded-2xl p-6"
+                    >
                       <div className="flex items-start space-x-4">
                         <div className="w-20 h-20 bg-gray-200 rounded-xl"></div>
                         <div className="flex-1">
@@ -148,7 +167,9 @@ export default function Home() {
             <div className="relative">
               <Card className="shadow-2xl">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-asran-gray mb-6">레시피 검색하기</h3>
+                  <h3 className="text-2xl font-bold text-asran-gray mb-6">
+                    레시피 검색하기
+                  </h3>
 
                   <div className="relative mb-6">
                     <Input
@@ -171,30 +192,36 @@ export default function Home() {
                   <div className="mb-6">
                     <p className="text-sm text-gray-600 mb-3">인기 검색어</p>
                     <div className="flex flex-wrap gap-2">
-                      {["김치찌개", "파스타", "갈비찜", "스테이크"].map((tag) => (
-                        <Button
-                          key={tag}
-                          variant="outline"
-                          size="sm"
-                          className="hover:bg-asran-amber hover:text-white hover:border-asran-amber"
-                          data-testid={`button-tag-${tag}`}
-                          onClick={() => {
-                            window.location.href = `/blog?search=${encodeURIComponent(tag)}`;
-                          }}
-                        >
-                          #{tag}
-                        </Button>
-                      ))}
+                      {["김치찌개", "파스타", "갈비찜", "스테이크"].map(
+                        (tag) => (
+                          <Button
+                            key={tag}
+                            variant="outline"
+                            size="sm"
+                            className="hover:bg-asran-amber hover:text-white hover:border-asran-amber"
+                            data-testid={`button-tag-${tag}`}
+                            onClick={() => {
+                              window.location.href = `/blog?search=${encodeURIComponent(tag)}`;
+                            }}
+                          >
+                            #{tag}
+                          </Button>
+                        ),
+                      )}
                     </div>
                   </div>
 
                   <div className="grid grid-cols-2 gap-4 pt-6 border-t border-gray-200">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-asran-amber">{recipes.length || 247}</div>
+                      <div className="text-2xl font-bold text-asran-amber">
+                        {recipes.length || 247}
+                      </div>
                       <div className="text-sm text-gray-600">전체 레시피</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-asran-amber">초급-중급</div>
+                      <div className="text-2xl font-bold text-asran-amber">
+                        초급-중급
+                      </div>
                       <div className="text-sm text-gray-600">평균 난이도</div>
                     </div>
                   </div>
@@ -209,7 +236,9 @@ export default function Home() {
       <section className="py-16 lg:py-24" data-testid="reviews-preview-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-asran-gray mb-6">고객들의 진솔한 후기</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-asran-gray mb-6">
+              고객들의 진솔한 후기
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               실제 사용하신 고객들의 생생한 후기와 요리 사진을 확인해보세요
             </p>
@@ -220,14 +249,18 @@ export default function Home() {
             <CardContent className="p-8">
               <div className="grid md:grid-cols-3 gap-8 items-center">
                 <div className="text-center">
-                  <div className="text-5xl font-bold text-asran-amber mb-2">{averageRating.toFixed(2)}</div>
+                  <div className="text-5xl font-bold text-asran-amber mb-2">
+                    {averageRating.toFixed(2)}
+                  </div>
                   <div className="flex justify-center text-asran-amber mb-2">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <Star key={i} className="w-6 h-6 fill-current" />
                     ))}
                   </div>
                   <p className="text-gray-600">전체 평균 별점</p>
-                  <p className="text-sm text-gray-500 mt-1">{totalReviews}개 리뷰 기준</p>
+                  <p className="text-sm text-gray-500 mt-1">
+                    {totalReviews}개 리뷰 기준
+                  </p>
                 </div>
 
                 <div>
@@ -240,24 +273,40 @@ export default function Home() {
                       { stars: 1, percentage: 1 },
                     ].map(({ stars, percentage }) => (
                       <div key={stars} className="flex items-center">
-                        <span className="text-sm text-gray-600 w-8">{stars}★</span>
+                        <span className="text-sm text-gray-600 w-8">
+                          {stars}★
+                        </span>
                         <div className="flex-1 bg-gray-200 rounded-full h-2 mx-3">
-                          <div 
-                            className="bg-asran-amber h-2 rounded-full" 
+                          <div
+                            className="bg-asran-amber h-2 rounded-full"
                             style={{ width: `${percentage}%` }}
                           />
                         </div>
-                        <span className="text-sm text-gray-600 w-12">{percentage}%</span>
+                        <span className="text-sm text-gray-600 w-12">
+                          {percentage}%
+                        </span>
                       </div>
                     ))}
                   </div>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-asran-gray mb-3">고객 만족 키워드</h4>
+                  <h4 className="font-semibold text-asran-gray mb-3">
+                    고객 만족 키워드
+                  </h4>
                   <div className="flex flex-wrap gap-2">
-                    {["가벼움", "인덕션호환", "균등가열", "내구성", "세척편의"].map((keyword) => (
-                      <Badge key={keyword} variant="secondary" className="text-xs">
+                    {[
+                      "가벼움",
+                      "인덕션호환",
+                      "균등가열",
+                      "내구성",
+                      "세척편의",
+                    ].map((keyword) => (
+                      <Badge
+                        key={keyword}
+                        variant="secondary"
+                        className="text-xs"
+                      >
                         #{keyword}
                       </Badge>
                     ))}
@@ -294,7 +343,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <Link href="/reviews">
-              <Button 
+              <Button
                 className="bg-asran-gray hover:bg-gray-800 text-white px-8 py-4 text-lg"
                 data-testid="button-view-all-reviews"
               >
