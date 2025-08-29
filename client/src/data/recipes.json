@@ -7,12 +7,7 @@
     "difficulty": "초급",
     "timeMinutes": 25,
     "servings": 4,
-    "ingredients": [
-      "불린 미역 30g",
-      "소고기 양지 200g",
-      "국간장",
-      "참기름"
-    ],
+    "ingredients": ["불린 미역 30g", "소고기 양지 200g", "국간장", "참기름"],
     "steps": [
       "소고기와 참기름을 볶음 → 미역 투입.",
       "물 1.5L 붓고 압력 10분 조리.",
@@ -20,7 +15,8 @@
     ],
     "tips": ["압력 후 5분 더 끓이면 국물 맛이 진해짐."],
     "schema": "Recipe",
-    "createdAt": "2024-01-01T00:00:00.000Z"
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "image": "/recipes/m.jpg"
   },
   {
     "id": "braised-ribs",
@@ -30,14 +26,7 @@
     "difficulty": "중급",
     "timeMinutes": 60,
     "servings": 5,
-    "ingredients": [
-      "소갈비 1kg",
-      "무",
-      "당근",
-      "간장",
-      "배즙",
-      "마늘"
-    ],
+    "ingredients": ["소갈비 1kg", "무", "당근", "간장", "배즙", "마늘"],
     "steps": [
       "핏물 뺀 갈비를 양념장에 재움.",
       "야채+양념+물 넣고 압력 25분 조리.",
@@ -45,7 +34,8 @@
     ],
     "tips": ["하루 숙성 후 데우면 풍미가 깊어짐."],
     "schema": "Recipe",
-    "createdAt": "2024-01-01T00:00:00.000Z"
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "image": "/recipes/gal.jpg"
   },
   {
     "id": "chicken-ginseng-soup",
@@ -55,13 +45,7 @@
     "difficulty": "초급",
     "timeMinutes": 40,
     "servings": 4,
-    "ingredients": [
-      "영계 1마리",
-      "찹쌀",
-      "인삼",
-      "대추",
-      "마늘"
-    ],
+    "ingredients": ["영계 1마리", "찹쌀", "인삼", "대추", "마늘"],
     "steps": [
       "닭 속에 찹쌀+대추+마늘 넣음.",
       "압력솥에 물 2L와 함께 20분 조리.",
@@ -69,7 +53,8 @@
     ],
     "tips": ["조리 전 거품 제거하면 국물이 맑아짐."],
     "schema": "Recipe",
-    "createdAt": "2024-01-01T00:00:00.000Z"
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "image": "/recipes/sam.jpg"
   },
   {
     "id": "curry-rice",
@@ -79,13 +64,7 @@
     "difficulty": "초급",
     "timeMinutes": 25,
     "servings": 4,
-    "ingredients": [
-      "닭/돼지고기 300g",
-      "감자",
-      "당근",
-      "양파",
-      "카레가루"
-    ],
+    "ingredients": ["닭/돼지고기 300g", "감자", "당근", "양파", "카레가루"],
     "steps": [
       "고기와 야채 볶기.",
       "물 700ml 넣고 압력 5분 조리.",
@@ -93,7 +72,8 @@
     ],
     "tips": ["토마토를 추가하면 새콤한 맛이 가미됨."],
     "schema": "Recipe",
-    "createdAt": "2024-01-01T00:00:00.000Z"
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "image": "/recipes/ca.jpg"
   },
   {
     "id": "bean-stew",
@@ -103,19 +83,12 @@
     "difficulty": "초급",
     "timeMinutes": 35,
     "servings": 6,
-    "ingredients": [
-      "검은콩 2컵",
-      "간장",
-      "설탕",
-      "물엿"
-    ],
-    "steps": [
-      "콩 불려 압력 15분 조리.",
-      "물 버리고 양념장에 졸이기."
-    ],
+    "ingredients": ["검은콩 2컵", "간장", "설탕", "물엿"],
+    "steps": ["콩 불려 압력 15분 조리.", "물 버리고 양념장에 졸이기."],
     "tips": ["완전히 식히면 콩이 더 쫄깃해짐."],
     "schema": "Recipe",
-    "createdAt": "2024-01-01T00:00:00.000Z"
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "image": "/recipes/bean.jpeg"
   },
   {
     "id": "pork-backbone-soup",
@@ -125,13 +98,7 @@
     "difficulty": "중급",
     "timeMinutes": 60,
     "servings": 4,
-    "ingredients": [
-      "돼지등뼈 1kg",
-      "감자",
-      "시래기",
-      "된장",
-      "고춧가루"
-    ],
+    "ingredients": ["돼지등뼈 1kg", "감자", "시래기", "된장", "고춧가루"],
     "steps": [
       "등뼈 핏물 제거 후 압력 10분.",
       "새 물+양념+감자 넣고 압력 15분.",
@@ -139,7 +106,8 @@
     ],
     "tips": ["들깨가루 넣으면 고소한 맛이 강화됨."],
     "schema": "Recipe",
-    "createdAt": "2024-01-01T00:00:00.000Z"
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "image": "/recipes/gam.jpg"
   },
   {
     "id": "chicken-braised",
@@ -149,14 +117,7 @@
     "difficulty": "중급",
     "timeMinutes": 35,
     "servings": 4,
-    "ingredients": [
-      "닭 1kg",
-      "감자",
-      "당근",
-      "양파",
-      "고춧가루",
-      "고추장"
-    ],
+    "ingredients": ["닭 1kg", "감자", "당근", "양파", "고춧가루", "고추장"],
     "steps": [
       "닭과 양념 볶기.",
       "채소+물 넣고 압력 10분 조리.",
@@ -164,7 +125,8 @@
     ],
     "tips": ["청양고추 넣으면 매운맛 강화."],
     "schema": "Recipe",
-    "createdAt": "2024-01-01T00:00:00.000Z"
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "image": "/recipes/dak.jpg"
   },
   {
     "id": "german-potato-stew",
@@ -174,13 +136,7 @@
     "difficulty": "초급",
     "timeMinutes": 30,
     "servings": 4,
-    "ingredients": [
-      "감자",
-      "소시지",
-      "당근",
-      "베이컨",
-      "양파"
-    ],
+    "ingredients": ["감자", "소시지", "당근", "베이컨", "양파"],
     "steps": [
       "베이컨 볶고 야채 추가.",
       "물+월계수잎 넣고 압력 8분.",
@@ -188,7 +144,8 @@
     ],
     "tips": ["빵과 함께 곁들이면 정통 독일식 완성."],
     "schema": "Recipe",
-    "createdAt": "2024-01-01T00:00:00.000Z"
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "image": "/recipes/goam.jpeg"
   },
   {
     "id": "boiled-pork",
@@ -198,19 +155,12 @@
     "difficulty": "초급",
     "timeMinutes": 50,
     "servings": 4,
-    "ingredients": [
-      "돼지고기 앞다리살 1kg",
-      "된장",
-      "마늘",
-      "양파"
-    ],
-    "steps": [
-      "고기+양념+물 넣고 압력 20분.",
-      "익힌 후 썰어 내기."
-    ],
+    "ingredients": ["돼지고기 앞다리살 1kg", "된장", "마늘", "양파"],
+    "steps": ["고기+양념+물 넣고 압력 20분.", "익힌 후 썰어 내기."],
     "tips": ["삶은 국물은 국수 육수로 활용 가능."],
     "schema": "Recipe",
-    "createdAt": "2024-01-01T00:00:00.000Z"
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "image": "/recipes/s.jpeg"
   },
   {
     "id": "pressure-cooker-cheesecake",
@@ -220,13 +170,7 @@
     "difficulty": "고급",
     "timeMinutes": 60,
     "servings": 6,
-    "ingredients": [
-      "크림치즈 200g",
-      "설탕",
-      "계란 2개",
-      "생크림",
-      "밀가루"
-    ],
+    "ingredients": ["크림치즈 200g", "설탕", "계란 2개", "생크림", "밀가루"],
     "steps": [
       "재료 섞어 틀에 붓기.",
       "압력솥에 찜틀+물 넣고 약불 25분 조리.",
@@ -234,6 +178,7 @@
     ],
     "tips": ["하루 숙성 후 먹으면 풍미가 배가됨."],
     "schema": "Recipe",
-    "createdAt": "2024-01-01T00:00:00.000Z"
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "image": "/recipes/ch.jpeg"
   }
 ]
