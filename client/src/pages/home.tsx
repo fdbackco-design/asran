@@ -69,6 +69,16 @@ export default function Home() {
           className="w-full h-auto"
           data-testid="hero-image"
         />
+        <div className="text-center py-8">
+          <Link href="/products/asran-pot-3set">
+            <Button
+              className="bg-asran-amber hover:bg-yellow-500 text-asran-gray px-8 py-4 text-lg font-semibold"
+              data-testid="button-view-pot-set"
+            >
+              제품 보러가기
+            </Button>
+          </Link>
+        </div>
       </section>
 
       {/* Product Categories */}
