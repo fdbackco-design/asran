@@ -160,7 +160,7 @@
     "tips": ["삶은 국물은 국수 육수로 활용 가능."],
     "schema": "Recipe",
     "createdAt": "2024-01-01T00:00:00.000Z",
-    "image": "/recipes/s.jpeg"
+    "image": "/recipes/s.jpg"
   },
   {
     "id": "pressure-cooker-cheesecake",
@@ -179,6 +179,6 @@
     "tips": ["하루 숙성 후 먹으면 풍미가 배가됨."],
     "schema": "Recipe",
     "createdAt": "2024-01-01T00:00:00.000Z",
-    "image": "/recipes/ch.jpeg"
+    "image": "/recipes/ch.jpg"
   }
 ]
