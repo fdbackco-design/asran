@@ -12,7 +12,7 @@
       "/pot/image_Pippit_202507291037 (7).jpeg"
     ],
     "rating": 4.87,
-    "reviewCount": 523,
+    "reviewCount": 5,
     "specs": {
       "sizes": ["18cm 편수", "22cm 양수", "28cm 양수"],
       "material": "SUS410 스테인리스",
@@ -28,11 +28,9 @@
     "slug": "asran-frypan-28",
     "price": 49000,
     "usp": ["경량 설계", "균등 가열", "논스틱 코팅", "인덕션 호환"],
-    "images": [
-      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
-    ],
+    "images": ["/pan/pan-sample.jpg"],
     "rating": 4.92,
-    "reviewCount": 387,
+    "reviewCount": 3,
     "specs": {
       "size": "28cm",
       "material": "SUS410 스테인리스",
@@ -51,7 +49,7 @@
     "usp": ["안전 밸브", "시간 단축", "독일 안전 기준", "다중 안전장치"],
     "images": ["/pressure/cut.jpeg"],
     "rating": 4.85,
-    "reviewCount": 298,
+    "reviewCount": 2,
     "specs": {
       "size": "24cm",
       "capacity": "6L",
@@ -69,11 +67,9 @@
     "slug": "asran-knife-board-set",
     "price": 79000,
     "usp": ["항균 처리", "예리함 지속", "독일산 스테인리스", "안전 설계"],
-    "images": [
-      "https://pixabay.com/get/g939e7235c9e14acafa47b1ab0eb519dcdb23cb2a737b89a9f7fcd28943e95562941d2aea1d80d3c997f3cad18a30c05ca2be5d0d820e88201435f5e3c8814ca7_1280.jpg"
-    ],
+    "images": ["/knife/knife-sample.jpg"],
     "rating": 4.91,
-    "reviewCount": 445,
+    "reviewCount": 4,
     "specs": {
       "knives": [
         "셰프나이프 20cm",
@@ -94,11 +90,9 @@
     "slug": "asran-cutlery-set",
     "price": 39000,
     "usp": ["스테인리스", "모던 디자인", "내구성", "식기세척기 호환"],
-    "images": [
-      "https://pixabay.com/get/g34e53e77c39e8227eb7aa9653a8f5ebec1f6361a96cbbcb62213fdec4058f1df5ed841d3eb77c2ad0f677618f072b11391c11f8fe525ecc847615d0d1f7ef549_1280.jpg"
-    ],
+    "images": ["/spoon/spoon-sample.jpg"],
     "rating": 4.88,
-    "reviewCount": 672,
+    "reviewCount": 6,
     "specs": {
       "pieces": "24피스 (6인용)",
       "material": "18/10 스테인리스 스틸",
