@@ -19,13 +19,13 @@ export default function ProductCard({ product, className }: ProductCardProps) {
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-
+    
     addItem({
       productId: product.id,
       quantity: 1,
       sessionId: sessionStorage.getItem('sessionId') || crypto.randomUUID(),
     });
-
+    
     toast({
       title: "장바구니 추가",
       description: `${product.name}이(가) 장바구니에 추가되었습니다.`,
@@ -37,7 +37,7 @@ export default function ProductCard({ product, className }: ProductCardProps) {
       <Link href={`/products/${product.slug}`}>
         <div className="relative overflow-hidden rounded-t-2xl">
           <img
-            src="/pan/pan-sample.jpg"
+            src={product.images[0]}
             alt={product.name}
             className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
             data-testid={`img-product-${product.slug}`}
@@ -51,7 +51,7 @@ export default function ProductCard({ product, className }: ProductCardProps) {
             </div>
           )}
         </div>
-
+        
         <CardContent className="p-6">
           <h3 className="text-xl font-bold text-asran-gray mb-2" data-testid={`text-product-name-${product.slug}`}>
             {product.name}
@@ -59,7 +59,7 @@ export default function ProductCard({ product, className }: ProductCardProps) {
           <p className="text-gray-600 mb-4" data-testid={`text-product-category-${product.slug}`}>
             {product.category}
           </p>
-
+          
           {/* USP Badges */}
           <div className="flex flex-wrap gap-2 mb-4">
             {product.usp.slice(0, 2).map((usp, index) => (
@@ -68,7 +68,7 @@ export default function ProductCard({ product, className }: ProductCardProps) {
               </Badge>
             ))}
           </div>
-
+          
           {/* Rating */}
           <div className="flex items-center mb-4">
             <div className="flex text-asran-amber mr-2">
@@ -85,7 +85,7 @@ export default function ProductCard({ product, className }: ProductCardProps) {
               {product.rating} ({product.reviewCount}개 리뷰)
             </span>
           </div>
-
+          
           </CardContent>
       </Link>
     </Card>
