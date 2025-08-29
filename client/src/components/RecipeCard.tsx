@@ -28,11 +28,19 @@ export default function RecipeCard({ recipe, onViewRecipe, className }: RecipeCa
     <Card className={`hover:shadow-xl transition-shadow cursor-pointer ${className}`} data-testid={`card-recipe-${recipe.id}`}>
       <CardContent className="p-6">
         <div className="flex items-start space-x-4">
-          {/* Recipe Icon/Image placeholder */}
+          {/* Recipe Image */}
           <div className="w-20 h-20 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden">
-            <div className="w-full h-full bg-asran-amber/10 rounded-xl flex items-center justify-center">
-              <ChefHat className="w-8 h-8 text-asran-amber" />
-            </div>
+            {recipe.image ? (
+              <img
+                src={recipe.image}
+                alt={recipe.title}
+                className="w-full h-full object-cover rounded-xl"
+              />
+            ) : (
+              <div className="w-full h-full bg-asran-amber/10 rounded-xl flex items-center justify-center">
+                <ChefHat className="w-8 h-8 text-asran-amber" />
+              </div>
+            )}
           </div>
           
           <div className="flex-1">
