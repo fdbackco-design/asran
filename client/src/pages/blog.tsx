@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { useLocation } from "wouter";
+import { useLocation, Link } from "wouter";
 import { Clock, Users, ChefHat, Search, Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -398,9 +398,11 @@ export default function Blog() {
                         <p className="font-medium text-asran-amber">{selectedRecipe.bestWith}</p>
                       </div>
                       <div className="flex space-x-2">
-                        <Button className="bg-asran-amber hover:bg-yellow-500 text-asran-gray" data-testid="button-view-products">
-                          추천 제품 보기
-                        </Button>
+                        <Link href="/products/asran-pressure-24">
+                          <Button className="bg-asran-amber hover:bg-yellow-500 text-asran-gray" data-testid="button-view-products">
+                            추천 제품 보기
+                          </Button>
+                        </Link>
                       </div>
                     </div>
                   </div>
