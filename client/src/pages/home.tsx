@@ -69,7 +69,7 @@ export default function Home() {
           className="w-full h-auto"
           data-testid="hero-image"
         />
-        <div className="absolute bottom-8 left-8">
+        <div className="absolute bottom-8 left-32">
           <Link href="/products/asran-pot-3set">
             <Button
               className="bg-asran-amber hover:bg-yellow-500 text-asran-gray px-8 py-4 text-lg font-semibold shadow-lg"
