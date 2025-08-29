@@ -37,7 +37,7 @@ export default function ProductCard({ product, className }: ProductCardProps) {
       <Link href={`/products/${product.slug}`}>
         <div className="relative overflow-hidden rounded-t-2xl">
           <img
-            src={product.images[0]}
+            src="/pan/pan-sample.jpg"
             alt={product.name}
             className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
             data-testid={`img-product-${product.slug}`}
