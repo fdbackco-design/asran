@@ -58,69 +58,13 @@ export default function Home() {
   return (
     <div className="min-h-screen" data-testid="page-home">
       {/* Hero Section */}
-      <section className="relative asran-gradient text-white" data-testid="hero-section">
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"
-          }}
+      <section className="relative" data-testid="hero-section">
+        <img
+          src="/hero-banner.png"
+          alt="아슬란 주방용품"
+          className="w-full h-auto"
+          data-testid="hero-image"
         />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center bg-asran-amber text-asran-gray px-4 py-2 rounded-full text-sm font-medium mb-6">
-                <CheckCircle className="w-4 h-4 mr-2" />
-                독일 기술력 인증
-              </div>
-              <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight" data-testid="hero-title">
-                당신의 요리를<br />
-                <span className="text-asran-amber">완벽하게</span>, 아슬란
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed" data-testid="hero-description">
-                독일의 정밀한 기술력과 합리적인 가격으로 만나는 프리미엄 주방용품.<br />
-                인덕션 호환, 경량 설계, 3중 바닥 구조로 완벽한 요리 경험을 제공합니다.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/products">
-                  <Button 
-                    className="bg-asran-amber hover:bg-yellow-500 text-asran-gray px-8 py-4 text-lg"
-                    data-testid="button-view-bestsellers"
-                  >
-                    베스트셀러 보기
-                  </Button>
-                </Link>
-                <Link href="/about">
-                  <Button 
-                    variant="outline" 
-                    className="border-white hover:bg-white hover:text-asran-gray px-8 py-4 text-lg"
-                    data-testid="button-brand-story"
-                  >
-                    브랜드 스토리
-                  </Button>
-                </Link>
-              </div>
-            </div>
-
-            <div className="relative">
-              <img
-                src="https://pixabay.com/get/g2b9cb6e03342d740155e406239b386b692b151b0fdf2877d6324a11bf23b6580455b7f4efe326f8c4b59d3b2b6d67a12ce06ba2eb06e6063f86e355ce91a81a0_1280.jpg"
-                alt="아슬란 냄비 3종 세트"
-                className="w-full h-auto rounded-2xl shadow-2xl"
-                data-testid="hero-image"
-              />
-              <div className="absolute -bottom-4 -right-4 bg-white text-asran-gray p-4 rounded-xl shadow-lg">
-                <div className="flex items-center space-x-2">
-                  <div className="flex text-asran-amber">
-                    <Star className="w-5 h-5 fill-current" />
-                    <span className="font-bold ml-1">{averageRating.toFixed(2)}</span>
-                  </div>
-                  <span className="text-sm text-gray-600">{totalReviews}개 리뷰</span>
-                </div>
-                <p className="text-sm font-medium mt-1">고객 만족도 {satisfactionRate}%</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* Product Categories */}
