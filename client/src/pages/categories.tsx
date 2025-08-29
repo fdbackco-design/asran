@@ -38,8 +38,7 @@ export default function Categories() {
       name: "프라이팬",
       description: "논스틱 코팅과 튼튼한 내구성을 자랑하는 프라이팬",
       features: ["세라믹 논스틱", "긁힘 방지", "고온 조리 가능"],
-      image:
-        "https://images.unsplash.com/photo-1556909045-4d394c0e6ad8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      image: "/pan/pan-sample.jpg",
       category: "후라이팬",
       productSlug: "asran-frypan-28",
       productCount: 1,
@@ -49,8 +48,7 @@ export default function Categories() {
       name: "칼, 도마",
       description: "전문가 수준의 칼과 위생적인 도마 세트",
       features: ["독일강 재질", "인체공학적 손잡이", "항균 도마"],
-      image:
-        "https://images.unsplash.com/photo-1593618998160-e34014e67546?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      image: "/knife/knife-sample.jpg",
       category: "칼&도마",
       productSlug: "asran-knife-board-set",
       productCount: 1,
@@ -70,8 +68,7 @@ export default function Categories() {
       name: "수저세트",
       description: "고급스러운 스테인리스 스틸 수저 세트",
       features: ["316 스테인리스", "세련된 디자인", "식기세척기 호환"],
-      image:
-        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      image: "/spoon/spoon-sample.jpg",
       category: "수저세트",
       productSlug: "asran-cutlery-set",
       productCount: 1,
@@ -91,10 +88,12 @@ export default function Categories() {
           </h1>
           <div className="w-24 h-1 bg-asran-amber mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-4">
-            혁신적인 기술과 디자인을 바탕으로 한 ASRAN 브랜드의 제품을 소개합니다.
+            혁신적인 기술과 디자인을 바탕으로 한 ASRAN 브랜드의 제품을
+            소개합니다.
           </p>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            각 제품은 독일의 기술력을 바탕으로 제작된 장인정신이 담긴 제품입니다.
+            각 제품은 독일의 기술력을 바탕으로 제작된 장인정신이 담긴
+            제품입니다.
           </p>
         </div>
       </div>
