@@ -63,16 +63,45 @@ export default function Support() {
   return (
     <div className="min-h-screen bg-asran-bg" data-testid="page-support">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-3xl lg:text-4xl font-bold text-asran-gray mb-6">고객센터</h1>
-          <div className="flex items-center justify-center mb-4">
-            <Phone className="w-5 h-5 text-asran-amber mr-2" />
-            <span className="text-xl font-semibold text-asran-gray">031-429-8570</span>
+        {/* Customer Service Banner */}
+        <div className="relative bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800 rounded-2xl overflow-hidden mb-12">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600"></div>
+            <div className="absolute top-0 left-0 w-full h-full">
+              <div className="absolute top-10 left-10 w-32 h-32 border-l-2 border-t-2 border-white/20"></div>
+              <div className="absolute top-10 right-10 w-32 h-32 border-r-2 border-t-2 border-white/20"></div>
+              <div className="absolute bottom-10 left-10 w-32 h-32 border-l-2 border-b-2 border-white/20"></div>
+              <div className="absolute bottom-10 right-10 w-32 h-32 border-r-2 border-b-2 border-white/20"></div>
+            </div>
           </div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            궁금한 점이 있으시다면 FAQ를 확인해보세요
-          </p>
+          
+          <div className="relative z-10 text-center py-16 px-8">
+            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">ASRAN A/S 센터</h1>
+            <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+              ASRAN은 A/S 센터를 상시 운영하고 있습니다.
+            </p>
+            
+            {/* Phone Number */}
+            <div className="flex items-center justify-center mb-6">
+              <Phone className="w-8 h-8 text-asran-amber mr-4" />
+              <span className="text-4xl font-bold text-white tracking-wider">1544-9537</span>
+            </div>
+            
+            {/* Business Hours */}
+            <div className="text-white/90 mb-8">
+              <div className="text-lg font-medium">운영시간 : AM 10:00 ~ PM 17:00</div>
+              <div className="text-base text-white/70 mt-1">점심시간 PM 12:00~ PM 13:00</div>
+            </div>
+            
+            {/* CTA Button */}
+            <Button className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 text-lg font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
+              A/S 센터 자세히 보기
+            </Button>
+          </div>
+          
+          {/* Decorative Elements */}
+          <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/20 to-transparent"></div>
         </div>
 
         {/* FAQ Section */}
