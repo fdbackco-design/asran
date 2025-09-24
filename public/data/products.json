@@ -1,0 +1,110 @@
+[
+  {
+    "id": "asran-pot-3set",
+    "name": "아슬란 냄비 3종 세트",
+    "category": "냄비 3종 세트",
+    "slug": "asran-pot-3set",
+    "price": 99000,
+    "usp": ["독일 기술", "SUS410 3중 바닥", "인덕션/가스 호환", "경량"],
+    "images": [
+      "/pot/title.jpeg",
+      "/pot/image_Pippit_202507291037 (6).jpeg",
+      "/pot/image_Pippit_202507291037 (7).jpeg"
+    ],
+    "rating": 4.87,
+    "reviewCount": 5,
+    "specs": {
+      "sizes": ["18cm 편수", "22cm 양수", "28cm 양수"],
+      "material": "SUS410 스테인리스",
+      "compatible": ["Induction", "Gas", "Electric", "Halogen"]
+    },
+    "recipeTags": ["국/찌개", "찜/조림", "면/파스타"],
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "asran-frypan-28",
+    "name": "아슬란 후라이팬 28cm",
+    "category": "후라이팬",
+    "slug": "asran-frypan-28",
+    "price": 49000,
+    "usp": ["경량 설계", "균등 가열", "논스틱 코팅", "인덕션 호환"],
+    "images": ["/pan/pan-sample.jpg"],
+    "rating": 4.92,
+    "reviewCount": 3,
+    "specs": {
+      "size": "28cm",
+      "material": "SUS410 스테인리스",
+      "coating": "세라믹 논스틱",
+      "compatible": ["Induction", "Gas", "Electric", "Halogen"]
+    },
+    "recipeTags": ["스테이크", "볶음", "전/부침"],
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "asran-pressure-24",
+    "name": "아슬란 압력솥 24cm",
+    "category": "압력솥",
+    "slug": "asran-pressure-24",
+    "price": 129000,
+    "usp": ["안전 밸브", "시간 단축", "독일 안전 기준", "다중 안전장치"],
+    "images": ["/pressure/cut.jpeg"],
+    "rating": 4.85,
+    "reviewCount": 2,
+    "specs": {
+      "size": "24cm",
+      "capacity": "6L",
+      "material": "SUS410 스테인리스",
+      "safety": "3중 안전장치",
+      "compatible": ["Induction", "Gas", "Electric"]
+    },
+    "recipeTags": ["찜/조림", "갈비찜", "콩/곡물"],
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "asran-knife-board-set",
+    "name": "아슬란 칼 & 도마 세트",
+    "category": "칼&도마",
+    "slug": "asran-knife-board-set",
+    "price": 79000,
+    "usp": ["항균 처리", "예리함 지속", "독일산 스테인리스", "안전 설계"],
+    "images": ["/knife/knife-sample.jpg"],
+    "rating": 4.91,
+    "reviewCount": 4,
+    "specs": {
+      "knives": [
+        "셰프나이프 20cm",
+        "페어링 나이프 9cm",
+        "유틸리티 나이프 13cm"
+      ],
+      "board": "대나무 항균 도마 35x25cm",
+      "material": "독일산 스테인리스 스틸",
+      "features": ["항균 코팅", "논슬립 베이스"]
+    },
+    "recipeTags": ["채소 손질", "고기 절단", "과일 정리"],
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "asran-cutlery-set",
+    "name": "아슬란 수저 세트",
+    "category": "수저세트",
+    "slug": "asran-cutlery-set",
+    "price": 39000,
+    "usp": ["스테인리스", "모던 디자인", "내구성", "식기세척기 호환"],
+    "images": ["/spoon/spoon-sample.jpg"],
+    "rating": 4.88,
+    "reviewCount": 6,
+    "specs": {
+      "pieces": "24피스 (6인용)",
+      "material": "18/10 스테인리스 스틸",
+      "finish": "미러 폴리싱",
+      "includes": [
+        "디너 나이프/포크/스푼",
+        "샐러드 포크",
+        "티스푼",
+        "케이크 포크"
+      ]
+    },
+    "recipeTags": ["테이블 세팅", "식사", "파티"],
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  }
+]
