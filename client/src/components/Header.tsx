@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Search, ShoppingCart, Menu, X } from "lucide-react";
+import { Search, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useCart } from "@/hooks/use-cart";
 import SearchBox from "./SearchBox";
 import AsranLogo from "./AsranLogo";
 
@@ -12,7 +11,6 @@ export default function Header() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   
   const [location] = useLocation();
-  const { items } = useCart();
 
   const navigation = [
     { name: "제품", href: "/categories" },
@@ -30,7 +28,6 @@ export default function Header() {
     return false;
   };
 
-  const cartItemCount = items.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <header

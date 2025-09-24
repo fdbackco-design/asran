@@ -1,11 +1,9 @@
 import { Link } from "wouter";
-import { Star, ShoppingCart } from "lucide-react";
+import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Product } from "@shared/schema";
-import { useCart } from "@/hooks/use-cart";
-import { useToast } from "@/hooks/use-toast";
 
 interface ProductCardProps {
   product: Product;
@@ -13,24 +11,7 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product, className }: ProductCardProps) {
-  const { addItem } = useCart();
-  const { toast } = useToast();
 
-  const handleAddToCart = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    
-    addItem({
-      productId: product.id,
-      quantity: 1,
-      sessionId: sessionStorage.getItem('sessionId') || crypto.randomUUID(),
-    });
-    
-    toast({
-      title: "장바구니 추가",
-      description: `${product.name}이(가) 장바구니에 추가되었습니다.`,
-    });
-  };
 
   return (
     <Card className={`group cursor-pointer hover:shadow-2xl asran-hover-lift ${className}`} data-testid={`card-product-${product.slug}`}>

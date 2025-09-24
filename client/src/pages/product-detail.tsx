@@ -1,13 +1,11 @@
 import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "wouter";
-import { Star, ShoppingCart, Check, Clock, Users, Heart, Truck, Shield, Award, Phone } from "lucide-react";
+import { Star, Check, Clock, Users, Heart, Truck, Shield, Award, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import RecipeCard from "@/components/RecipeCard";
-import { useCart } from "@/hooks/use-cart";
-import { useToast } from "@/hooks/use-toast";
 import { updateSEO, generateProductSEO } from "@/lib/seo";
 import { Product, Recipe } from "@shared/schema";
 
@@ -15,9 +13,6 @@ export default function ProductDetail() {
   const params = useParams();
   const slug = params?.slug;
   const [selectedImage, setSelectedImage] = useState(0);
-  const [quantity, setQuantity] = useState(1);
-  const { addItem } = useCart();
-  const { toast } = useToast();
 
   // Fetch product data
   const { data: product, isLoading: productLoading } = useQuery({
@@ -47,20 +42,6 @@ export default function ProductDetail() {
     }
   }, [product]);
 
-  const handleAddToCart = () => {
-    if (!product) return;
-    
-    addItem({
-      productId: product.id,
-      quantity,
-      sessionId: sessionStorage.getItem('sessionId') || crypto.randomUUID(),
-    });
-    
-    toast({
-      title: "장바구니 추가 완료",
-      description: `${product.name}이(가) ${quantity}개 장바구니에 추가되었습니다.`,
-    });
-  };
 
   if (productLoading) {
     return (
