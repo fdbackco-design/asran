@@ -1,7 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { insertReviewSchema, insertFAQSchema, insertCartItemSchema } from "@shared/schema";
+import { insertReviewSchema, insertFAQSchema } from "@shared/schema";
 import { z } from "zod";
 import { fromZodError } from "zod-validation-error";
 
@@ -128,81 +128,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Cart API
-  app.get("/api/cart", async (req, res) => {
-    try {
-      const { sessionId, userId } = req.query;
-      const cartItems = await storage.getCartItems(sessionId as string, userId as string);
-      res.json(cartItems);
-    } catch (error) {
-      console.error("Error fetching cart:", error);
-      res.status(500).json({ error: "Failed to fetch cart" });
-    }
-  });
 
-  app.post("/api/cart", async (req, res) => {
-    try {
-      const validatedData = insertCartItemSchema.parse(req.body);
-      const cartItem = await storage.addToCart(validatedData);
-      res.status(201).json(cartItem);
-    } catch (error) {
-      if (error instanceof z.ZodError) {
-        const validationError = fromZodError(error);
-        return res.status(400).json({ error: validationError.toString() });
-      }
-      console.error("Error adding to cart:", error);
-      res.status(500).json({ error: "Failed to add to cart" });
-    }
-  });
-
-  app.patch("/api/cart/:id", async (req, res) => {
-    try {
-      const { id } = req.params;
-      const { quantity } = req.body;
-      
-      if (typeof quantity !== 'number' || quantity < 0) {
-        return res.status(400).json({ error: "Invalid quantity" });
-      }
-      
-      const cartItem = await storage.updateCartItem(id, quantity);
-      
-      if (!cartItem) {
-        return res.status(404).json({ error: "Cart item not found" });
-      }
-      
-      res.json(cartItem);
-    } catch (error) {
-      console.error("Error updating cart item:", error);
-      res.status(500).json({ error: "Failed to update cart item" });
-    }
-  });
-
-  app.delete("/api/cart/:id", async (req, res) => {
-    try {
-      const { id } = req.params;
-      const success = await storage.removeFromCart(id);
-      
-      if (!success) {
-        return res.status(404).json({ error: "Cart item not found" });
-      }
-      
-      res.status(204).send();
-    } catch (error) {
-      console.error("Error removing from cart:", error);
-      res.status(500).json({ error: "Failed to remove from cart" });
-    }
-  });
-
-  app.delete("/api/cart", async (req, res) => {
-    try {
-      const { sessionId, userId } = req.query;
-      const success = await storage.clearCart(sessionId as string, userId as string);
-      res.json({ success });
-    } catch (error) {
-      console.error("Error clearing cart:", error);
-      res.status(500).json({ error: "Failed to clear cart" });
-    }
-  });
 
   // CS Macro API for recipe suggestions
   app.post("/api/cs/suggestions", async (req, res) => {

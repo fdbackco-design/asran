@@ -60,14 +60,6 @@ export const faq = pgTable("faq", {
   createdAt: timestamp("created_at").defaultNow(),
 });
 
-export const cartItems = pgTable("cart_items", {
-  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
-  productId: text("product_id").notNull(),
-  quantity: integer("quantity").notNull(),
-  sessionId: text("session_id"),
-  userId: text("user_id"),
-  createdAt: timestamp("created_at").defaultNow(),
-});
 
 export const insertUserSchema = createInsertSchema(users).pick({
   username: true,
@@ -78,7 +70,6 @@ export const insertProductSchema = createInsertSchema(products);
 export const insertRecipeSchema = createInsertSchema(recipes);
 export const insertReviewSchema = createInsertSchema(reviews).omit({ id: true, createdAt: true });
 export const insertFAQSchema = createInsertSchema(faq).omit({ id: true, createdAt: true });
-export const insertCartItemSchema = createInsertSchema(cartItems).omit({ id: true, createdAt: true });
 
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
@@ -86,9 +77,7 @@ export type Product = typeof products.$inferSelect;
 export type Recipe = typeof recipes.$inferSelect;
 export type Review = typeof reviews.$inferSelect;
 export type FAQ = typeof faq.$inferSelect;
-export type CartItem = typeof cartItems.$inferSelect;
 export type InsertProduct = z.infer<typeof insertProductSchema>;
 export type InsertRecipe = z.infer<typeof insertRecipeSchema>;
 export type InsertReview = z.infer<typeof insertReviewSchema>;
 export type InsertFAQ = z.infer<typeof insertFAQSchema>;
-export type InsertCartItem = z.infer<typeof insertCartItemSchema>;

@@ -1,4 +1,4 @@
-import { type User, type InsertUser, type Product, type Recipe, type Review, type FAQ, type CartItem, type InsertProduct, type InsertRecipe, type InsertReview, type InsertFAQ, type InsertCartItem } from "@shared/schema";
+import { type User, type InsertUser, type Product, type Recipe, type Review, type FAQ, type InsertProduct, type InsertRecipe, type InsertReview, type InsertFAQ } from "@shared/schema";
 import { randomUUID } from "crypto";
 import products from "../client/src/data/products.json";
 import recipes from "../client/src/data/recipes.json";
@@ -31,12 +31,6 @@ export interface IStorage {
   getFAQByCategory(category: string): Promise<FAQ[]>;
   searchFAQ(query: string): Promise<FAQ[]>;
   
-  // Cart
-  getCartItems(sessionId?: string, userId?: string): Promise<CartItem[]>;
-  addToCart(item: InsertCartItem): Promise<CartItem>;
-  updateCartItem(id: string, quantity: number): Promise<CartItem | undefined>;
-  removeFromCart(id: string): Promise<boolean>;
-  clearCart(sessionId?: string, userId?: string): Promise<boolean>;
 }
 
 export class MemStorage implements IStorage {
@@ -45,15 +39,13 @@ export class MemStorage implements IStorage {
   private recipes: Recipe[];
   private reviews: Review[];
   private faqItems: FAQ[];
-  private cartItems: Map<string, CartItem>;
 
   constructor() {
     this.users = new Map();
-    this.products = products as Product[];
-    this.recipes = recipes as Recipe[];
-    this.reviews = reviews as Review[];
-    this.faqItems = faq as FAQ[];
-    this.cartItems = new Map();
+    this.products = products as any;
+    this.recipes = recipes as any;
+    this.reviews = reviews as any;
+    this.faqItems = faq as any;
   }
 
   async getUser(id: string): Promise<User | undefined> {
@@ -121,7 +113,7 @@ export class MemStorage implements IStorage {
 
   async createReview(review: InsertReview): Promise<Review> {
     const id = randomUUID();
-    const newReview: Review = { ...review, id, helpful: 0, createdAt: new Date() };
+    const newReview: Review = { ...review, id, helpful: 0, createdAt: new Date(), images: review.images || null };
     this.reviews.push(newReview);
     return newReview;
   }
@@ -143,46 +135,6 @@ export class MemStorage implements IStorage {
     );
   }
 
-  async getCartItems(sessionId?: string, userId?: string): Promise<CartItem[]> {
-    return Array.from(this.cartItems.values()).filter(item => 
-      item.sessionId === sessionId || item.userId === userId
-    );
-  }
-
-  async addToCart(item: InsertCartItem): Promise<CartItem> {
-    const id = randomUUID();
-    const cartItem: CartItem = { ...item, id, createdAt: new Date() };
-    this.cartItems.set(id, cartItem);
-    return cartItem;
-  }
-
-  async updateCartItem(id: string, quantity: number): Promise<CartItem | undefined> {
-    const item = this.cartItems.get(id);
-    if (item) {
-      item.quantity = quantity;
-      this.cartItems.set(id, item);
-      return item;
-    }
-    return undefined;
-  }
-
-  async removeFromCart(id: string): Promise<boolean> {
-    return this.cartItems.delete(id);
-  }
-
-  async clearCart(sessionId?: string, userId?: string): Promise<boolean> {
-    const items = Array.from(this.cartItems.entries());
-    let cleared = false;
-    
-    for (const [id, item] of items) {
-      if (item.sessionId === sessionId || item.userId === userId) {
-        this.cartItems.delete(id);
-        cleared = true;
-      }
-    }
-    
-    return cleared;
-  }
 }
 
 export const storage = new MemStorage();
