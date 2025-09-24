@@ -11,8 +11,8 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } f
 import RecipeCard from "@/components/RecipeCard";
 import { updateSEO } from "@/lib/seo";
 import { insertJSONLD, generateRecipeSchema } from "@/lib/schema";
-import { searchContent } from "@/lib/search";
 import { Recipe, Product } from "@shared/schema";
+import { getAllRecipes, getAllProducts, searchContent } from "@/lib/dataClient";
 
 export default function Blog() {
   const [location] = useLocation();
@@ -49,17 +49,19 @@ export default function Blog() {
 
   // Fetch recipes
   const { data: recipes = [], isLoading: recipesLoading } = useQuery({
-    queryKey: ["/api/recipes"],
+    queryKey: ["recipes"],
+    queryFn: getAllRecipes,
   });
 
   // Fetch products for filter
   const { data: products = [] } = useQuery({
-    queryKey: ["/api/products"],
+    queryKey: ["products"],
+    queryFn: getAllProducts,
   });
 
   // Search recipes when query exists
   const { data: searchResults } = useQuery({
-    queryKey: ["/api/search", searchQuery],
+    queryKey: ["search", searchQuery],
     queryFn: () => searchContent(searchQuery),
     enabled: searchQuery.length > 2,
   });

@@ -12,28 +12,23 @@ import ReviewCard from "@/components/ReviewCard";
 import { updateSEO, generateHomeSEO } from "@/lib/seo";
 import { insertJSONLD, generateOrganizationSchema } from "@/lib/schema";
 import { Product, Recipe, Review } from "@shared/schema";
+import { getAllProducts, getAllRecipes, getAllReviews } from "@/lib/dataClient";
 
 export default function Home() {
   // Fetch data for homepage
   const { data: products = [], isLoading: productsLoading } = useQuery({
-    queryKey: ["/api/products"],
+    queryKey: ["products"],
+    queryFn: getAllProducts,
   });
 
   const { data: recipes = [], isLoading: recipesLoading } = useQuery({
-    queryKey: ["/api/recipes"],
+    queryKey: ["recipes"],
+    queryFn: getAllRecipes,
   });
 
   const { data: allReviews = [], isLoading: reviewsLoading } = useQuery({
-    queryKey: ["/api/reviews", "all"],
-    queryFn: async () => {
-      const response = await fetch("/api/products");
-      const products = await response.json();
-      const reviewPromises = products.map((product: Product) =>
-        fetch(`/api/reviews/${product.id}`).then((res) => res.json()),
-      );
-      const reviewsArrays = await Promise.all(reviewPromises);
-      return reviewsArrays.flat();
-    },
+    queryKey: ["reviews"],
+    queryFn: getAllReviews,
   });
 
   // SEO setup

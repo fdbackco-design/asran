@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useLocation } from "wouter";
 import { Filter, Grid, List } from "lucide-react";
@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import ProductCard from "@/components/ProductCard";
 import { updateSEO } from "@/lib/seo";
 import { Product } from "@shared/schema";
+import { getAllProducts, searchProducts, getProductsByCategory } from "@/lib/dataClient";
 
 export default function Products() {
   const [location] = useLocation();
@@ -53,19 +54,33 @@ export default function Products() {
     });
   }, [category, search]);
 
-  // Fetch products
-  const { data: products = [], isLoading, error } = useQuery({
-    queryKey: ["/api/products", category, search],
-    queryFn: async () => {
-      const params = new URLSearchParams();
-      if (category) params.append('category', category);
-      if (search) params.append('search', search);
-      
-      const response = await fetch(`/api/products?${params.toString()}`);
-      if (!response.ok) throw new Error('Failed to fetch products');
-      return response.json();
-    },
+  // Fetch all products
+  const { data: allProducts = [], isLoading, error } = useQuery({
+    queryKey: ["products"],
+    queryFn: getAllProducts,
   });
+
+  // Filter products based on category and search
+  const products = useMemo(() => {
+    let filtered = allProducts;
+
+    // Apply category filter
+    if (category && category !== "전체") {
+      filtered = filtered.filter(p => p.category === category);
+    }
+
+    // Apply search filter
+    if (search) {
+      const searchLower = search.toLowerCase();
+      filtered = filtered.filter(p => 
+        p.name.toLowerCase().includes(searchLower) ||
+        p.category.toLowerCase().includes(searchLower) ||
+        p.usp.some(u => u.toLowerCase().includes(searchLower))
+      );
+    }
+
+    return filtered;
+  }, [allProducts, category, search]);
 
   // Sort products
   const sortedProducts = [...products].sort((a: Product, b: Product) => {

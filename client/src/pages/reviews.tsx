@@ -9,6 +9,7 @@ import { Progress } from "@/components/ui/progress";
 import ReviewCard from "@/components/ReviewCard";
 import { updateSEO } from "@/lib/seo";
 import { Product, Review } from "@shared/schema";
+import { getAllProducts, getAllReviews } from "@/lib/dataClient";
 
 export default function Reviews() {
   const [selectedProduct, setSelectedProduct] = useState<string>("all");
@@ -26,21 +27,14 @@ export default function Reviews() {
 
   // Fetch all products for filter
   const { data: products = [] } = useQuery({
-    queryKey: ["/api/products"],
+    queryKey: ["products"],
+    queryFn: getAllProducts,
   });
 
   // Fetch all reviews
   const { data: allReviews = [], isLoading } = useQuery({
-    queryKey: ["/api/reviews", "all"],
-    queryFn: async () => {
-      const response = await fetch("/api/products");
-      const products = await response.json();
-      const reviewPromises = products.map((product: Product) =>
-        fetch(`/api/reviews/${product.id}`).then(res => res.json())
-      );
-      const reviewsArrays = await Promise.all(reviewPromises);
-      return reviewsArrays.flat();
-    },
+    queryKey: ["reviews"],
+    queryFn: getAllReviews,
   });
 
   // Filter and sort reviews

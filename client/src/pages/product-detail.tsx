@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import RecipeCard from "@/components/RecipeCard";
 import { updateSEO, generateProductSEO } from "@/lib/seo";
 import { Product, Recipe } from "@shared/schema";
+import { getProductBySlug, getRecipesByProduct } from "@/lib/dataClient";
 
 export default function ProductDetail() {
   const params = useParams();
@@ -16,22 +17,15 @@ export default function ProductDetail() {
 
   // Fetch product data
   const { data: product, isLoading: productLoading } = useQuery({
-    queryKey: ["/api/products", slug],
-    queryFn: async () => {
-      const response = await fetch(`/api/products/${slug}`);
-      if (!response.ok) throw new Error('Product not found');
-      return response.json();
-    },
+    queryKey: ["product", slug],
+    queryFn: () => getProductBySlug(slug as string),
     enabled: !!slug,
   });
 
   // Fetch related recipes
   const { data: recipes = [] } = useQuery({
-    queryKey: ["/api/recipes", product?.id],
-    queryFn: async () => {
-      const response = await fetch(`/api/recipes?product=${product.id}`);
-      return response.json();
-    },
+    queryKey: ["recipes", "product", product?.id],
+    queryFn: () => getRecipesByProduct(product!.id),
     enabled: !!product?.id,
   });
 

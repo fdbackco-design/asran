@@ -20,8 +20,8 @@ import {
 import { Badge } from "@/components/ui/badge";
 import CustomerServiceForm from "@/components/CustomerServiceForm";
 import { updateSEO } from "@/lib/seo";
-import { searchFAQ } from "@/lib/search";
 import { FAQ } from "@shared/schema";
+import { getAllFAQ, searchFAQ } from "@/lib/dataClient";
 
 export default function Support() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -39,12 +39,13 @@ export default function Support() {
 
   // Fetch FAQ data
   const { data: allFAQ = [], isLoading } = useQuery({
-    queryKey: ["/api/faq"],
+    queryKey: ["faq"],
+    queryFn: getAllFAQ,
   });
 
   // Search FAQ
   const { data: searchResults = [] } = useQuery({
-    queryKey: ["/api/faq/search", searchQuery],
+    queryKey: ["faq", "search", searchQuery],
     queryFn: () => searchFAQ(searchQuery),
     enabled: searchQuery.length > 2,
   });
