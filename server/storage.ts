@@ -113,7 +113,7 @@ export class MemStorage implements IStorage {
 
   async createReview(review: InsertReview): Promise<Review> {
     const id = randomUUID();
-    const newReview: Review = { ...review, id, helpful: 0, createdAt: new Date(), images: review.images || null };
+    const newReview: Review = { ...review, id, helpful: 0, createdAt: new Date(), images: (review.images as string[]) || null };
     this.reviews.push(newReview);
     return newReview;
   }
