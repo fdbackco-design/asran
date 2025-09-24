@@ -51,7 +51,9 @@ export function generateHomeSEO() {
     openGraph: {
       title: "ASRAN - 독일 기술력의 프리미엄 주방용품",
       description: "독일 기술력과 합리적 가격의 완벽한 조합",
+      image: "https://www.asrankitchen.com/asran-logo.png",
       type: "website",
+      url: "https://www.asrankitchen.com",
     },
   };
 }
@@ -85,9 +87,20 @@ export function updateSEO(seoData: ReturnType<typeof generateProductSEO | typeof
     updateMeta("og:title", seoData.openGraph.title, true);
     updateMeta("og:description", seoData.openGraph.description, true);
     updateMeta("og:type", seoData.openGraph.type, true);
+    updateMeta("og:site_name", "ASRAN", true);
     
     if ("image" in seoData.openGraph && seoData.openGraph.image) {
       updateMeta("og:image", seoData.openGraph.image, true);
+      updateMeta("og:image:width", "1200", true);
+      updateMeta("og:image:height", "630", true);
+      updateMeta("og:image:alt", "ASRAN - 독일 기술력의 프리미엄 주방용품", true);
+    }
+    
+    if ("url" in seoData.openGraph && seoData.openGraph.url) {
+      updateMeta("og:url", seoData.openGraph.url, true);
     }
   }
+
+  // 카카오톡 특화 메타 태그
+  updateMeta("og:locale", "ko_KR", true);
 }
