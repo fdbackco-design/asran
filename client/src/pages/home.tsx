@@ -194,7 +194,7 @@ export default function Home() {
                     <Search className="w-5 h-5 sm:w-6 sm:h-6 text-gray-400 absolute left-3 sm:left-4 top-3 sm:top-4" />
                   </div>
 
-                  <div className="mb-4 sm:mb-6">
+                  {/* <div className="mb-4 sm:mb-6">
                     <p className="text-xs sm:text-sm text-gray-600 mb-2 sm:mb-3">
                       인기 검색어
                     </p>
@@ -216,7 +216,7 @@ export default function Home() {
                         ),
                       )}
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className="grid grid-cols-2 gap-3 sm:gap-4 pt-4 sm:pt-6 border-t border-gray-200">
                     <div className="text-center">
