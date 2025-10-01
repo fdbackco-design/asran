@@ -1,7 +1,7 @@
 {
-  "name": "아슬란(ASRAN) - 독일 기술력의 프리미엄 주방용품",
+  "name": "아스란(ASRAN) - 독일 기술력의 프리미엄 주방용품",
   "short_name": "ASRAN",
-  "description": "독일 기술력과 합리적 가격을 자랑하는 아슬란 주방용품. 냄비 세트, 후라이팬, 압력솥으로 완벽한 요리를 경험하세요.",
+  "description": "독일 기술력과 합리적 가격을 자랑하는 아스란 주방용품. 냄비 세트, 후라이팬, 압력솥으로 완벽한 요리를 경험하세요.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#F9FAFB",
@@ -64,14 +64,14 @@
     {
       "name": "제품 카탈로그",
       "short_name": "제품",
-      "description": "아슬란의 모든 제품을 둘러보세요",
+      "description": "아스란의 모든 제품을 둘러보세요",
       "url": "/products",
       "icons": [{ "src": "/icons/shortcut-products.png", "sizes": "96x96" }]
     },
     {
       "name": "레시피",
       "short_name": "레시피",
-      "description": "아슬란 제품으로 만드는 다양한 레시피",
+      "description": "아스란 제품으로 만드는 다양한 레시피",
       "url": "/blog",
       "icons": [{ "src": "/icons/shortcut-recipes.png", "sizes": "96x96" }]
     },

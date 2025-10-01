@@ -60,7 +60,7 @@ export default function Home() {
       <section className="relative" data-testid="hero-section">
         <img
           src="/asranbanner1.png"
-          alt="아슬란 주방용품"
+          alt="아스란 주방용품"
           className="w-full h-auto"
           data-testid="hero-image"
         />
@@ -87,7 +87,7 @@ export default function Home() {
               프리미엄 주방용품 컬렉션
             </h2>
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4 leading-relaxed">
-              독일 기술력으로 제작된 아슬란의 주방용품으로 요리의 새로운 차원을
+              독일 기술력으로 제작된 아스란의 주방용품으로 요리의 새로운 차원을
               경험하세요
             </p>
           </div>
@@ -195,7 +195,9 @@ export default function Home() {
                   </div>
 
                   <div className="mb-4 sm:mb-6">
-                    <p className="text-xs sm:text-sm text-gray-600 mb-2 sm:mb-3">인기 검색어</p>
+                    <p className="text-xs sm:text-sm text-gray-600 mb-2 sm:mb-3">
+                      인기 검색어
+                    </p>
                     <div className="flex flex-wrap gap-2">
                       {["김치찌개", "파스타", "갈비찜", "스테이크"].map(
                         (tag) => (
@@ -221,13 +223,17 @@ export default function Home() {
                       <div className="text-lg sm:text-2xl font-bold text-asran-amber">
                         {recipes.length || 247}
                       </div>
-                      <div className="text-xs sm:text-sm text-gray-600">전체 레시피</div>
+                      <div className="text-xs sm:text-sm text-gray-600">
+                        전체 레시피
+                      </div>
                     </div>
                     <div className="text-center">
                       <div className="text-lg sm:text-2xl font-bold text-asran-amber">
                         초급-중급
                       </div>
-                      <div className="text-xs sm:text-sm text-gray-600">평균 난이도</div>
+                      <div className="text-xs sm:text-sm text-gray-600">
+                        평균 난이도
+                      </div>
                     </div>
                   </div>
                 </CardContent>
@@ -238,7 +244,10 @@ export default function Home() {
       </section>
 
       {/* Customer Reviews Preview */}
-      <section className="py-8 sm:py-12 lg:py-24" data-testid="reviews-preview-section">
+      <section
+        className="py-8 sm:py-12 lg:py-24"
+        data-testid="reviews-preview-section"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-asran-gray mb-4 sm:mb-6 px-4">
@@ -259,10 +268,15 @@ export default function Home() {
                   </div>
                   <div className="flex justify-center text-asran-amber mb-2">
                     {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 fill-current" />
+                      <Star
+                        key={i}
+                        className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 fill-current"
+                      />
                     ))}
                   </div>
-                  <p className="text-sm sm:text-base text-gray-600">전체 평균 별점</p>
+                  <p className="text-sm sm:text-base text-gray-600">
+                    전체 평균 별점
+                  </p>
                   <p className="text-xs sm:text-sm text-gray-500 mt-1">
                     {totalReviews}개 리뷰 기준
                   </p>

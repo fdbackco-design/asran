@@ -4,10 +4,22 @@ import { useLocation, Link } from "wouter";
 import { Clock, Users, ChefHat, Search, Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import RecipeCard from "@/components/RecipeCard";
 import { updateSEO } from "@/lib/seo";
 import { insertJSONLD, generateRecipeSchema } from "@/lib/schema";
@@ -24,10 +36,10 @@ export default function Blog() {
 
   // Parse URL parameters
   useEffect(() => {
-    const params = new URLSearchParams(location.split('?')[1] || '');
-    const searchParam = params.get('search');
-    const recipeParam = params.get('recipe');
-    
+    const params = new URLSearchParams(location.split("?")[1] || "");
+    const searchParam = params.get("search");
+    const recipeParam = params.get("recipe");
+
     if (searchParam) setSearchQuery(searchParam);
     if (recipeParam) {
       // Find and open specific recipe
@@ -36,15 +48,19 @@ export default function Blog() {
   }, [location]);
 
   useEffect(() => {
-    const title = searchQuery 
+    const title = searchQuery
       ? `"${searchQuery}" 레시피 검색 결과 | ASRAN`
-      : "레시피 & 요리팁 - 아슬란 주방용품 | ASRAN";
-    
-    const description = searchQuery
-      ? `"${searchQuery}" 관련 레시피와 요리팁을 아슬란 주방용품으로 만나보세요.`
-      : "아슬란 주방용품으로 만드는 다양한 레시피와 요리팁. 초급부터 고급까지 난이도별 요리법을 제공합니다.";
+      : "레시피 & 요리팁 - 아스란 주방용품 | ASRAN";
 
-    updateSEO({ title, description, keywords: `아슬란 레시피, 요리법, 주방용품 활용, ${searchQuery}` });
+    const description = searchQuery
+      ? `"${searchQuery}" 관련 레시피와 요리팁을 아스란 주방용품으로 만나보세요.`
+      : "아스란 주방용품으로 만드는 다양한 레시피와 요리팁. 초급부터 고급까지 난이도별 요리법을 제공합니다.";
+
+    updateSEO({
+      title,
+      description,
+      keywords: `아스란 레시피, 요리법, 주방용품 활용, ${searchQuery}`,
+    });
   }, [searchQuery]);
 
   // Fetch recipes
@@ -67,10 +83,20 @@ export default function Blog() {
   });
 
   // Filter and sort recipes
-  const filteredRecipes = (searchQuery.length > 2 ? searchResults?.recipes || [] : recipes)
+  const filteredRecipes = (
+    searchQuery.length > 2 ? searchResults?.recipes || [] : recipes
+  )
     .filter((recipe: Recipe) => {
-      if (selectedDifficulty !== "all" && recipe.difficulty !== selectedDifficulty) return false;
-      if (selectedProduct !== "all" && !recipe.suitableProducts.includes(selectedProduct)) return false;
+      if (
+        selectedDifficulty !== "all" &&
+        recipe.difficulty !== selectedDifficulty
+      )
+        return false;
+      if (
+        selectedProduct !== "all" &&
+        !recipe.suitableProducts.includes(selectedProduct)
+      )
+        return false;
       return true;
     })
     .sort((a: Recipe, b: Recipe) => {
@@ -80,14 +106,18 @@ export default function Blog() {
         case "time-long":
           return b.timeMinutes - a.timeMinutes;
         case "difficulty":
-          const difficultyOrder = { "초급": 1, "중급": 2, "고급": 3 };
-          return difficultyOrder[a.difficulty as keyof typeof difficultyOrder] - 
-                 difficultyOrder[b.difficulty as keyof typeof difficultyOrder];
+          const difficultyOrder = { 초급: 1, 중급: 2, 고급: 3 };
+          return (
+            difficultyOrder[a.difficulty as keyof typeof difficultyOrder] -
+            difficultyOrder[b.difficulty as keyof typeof difficultyOrder]
+          );
         case "servings":
           return b.servings - a.servings;
         case "recent":
         default:
-          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+          return (
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+          );
       }
     });
 
@@ -95,7 +125,7 @@ export default function Blog() {
 
   const handleRecipeClick = (recipe: Recipe) => {
     setSelectedRecipe(recipe);
-    
+
     // Update SEO for recipe
     const seoData = {
       title: `${recipe.title} 레시피 | ASRAN`,
@@ -103,10 +133,10 @@ export default function Blog() {
       keywords: `${recipe.title}, 레시피, ${recipe.difficulty}, ${recipe.bestWith}`,
     };
     updateSEO(seoData);
-    
+
     // Add recipe structured data
-    const relatedProducts = products.filter((product: Product) => 
-      recipe.suitableProducts.includes(product.id)
+    const relatedProducts = products.filter((product: Product) =>
+      recipe.suitableProducts.includes(product.id),
     );
     insertJSONLD(generateRecipeSchema(recipe, relatedProducts));
   };
@@ -117,10 +147,12 @@ export default function Blog() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-3xl lg:text-4xl font-bold text-asran-gray mb-6">
-            {searchQuery ? `"${searchQuery}" 레시피 검색 결과` : "레시피 & 요리팁"}
+            {searchQuery
+              ? `"${searchQuery}" 레시피 검색 결과`
+              : "레시피 & 요리팁"}
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            아슬란 주방용품으로 만드는 다양한 레시피와 요리팁을 만나보세요
+            아스란 주방용품으로 만드는 다양한 레시피와 요리팁을 만나보세요
           </p>
         </div>
 
@@ -143,37 +175,53 @@ export default function Blog() {
             {/* Filters */}
             <div className="grid md:grid-cols-4 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">난이도</label>
-                <Select value={selectedDifficulty} onValueChange={setSelectedDifficulty}>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  난이도
+                </label>
+                <Select
+                  value={selectedDifficulty}
+                  onValueChange={setSelectedDifficulty}
+                >
                   <SelectTrigger data-testid="select-difficulty">
                     <SelectValue placeholder="모든 난이도" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="all">모든 난이도</SelectItem>
                     {difficulties.map((difficulty) => (
-                      <SelectItem key={difficulty} value={difficulty}>{difficulty}</SelectItem>
+                      <SelectItem key={difficulty} value={difficulty}>
+                        {difficulty}
+                      </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">추천 제품</label>
-                <Select value={selectedProduct} onValueChange={setSelectedProduct}>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  추천 제품
+                </label>
+                <Select
+                  value={selectedProduct}
+                  onValueChange={setSelectedProduct}
+                >
                   <SelectTrigger data-testid="select-product">
                     <SelectValue placeholder="모든 제품" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="all">모든 제품</SelectItem>
                     {products.map((product: Product) => (
-                      <SelectItem key={product.id} value={product.id}>{product.name}</SelectItem>
+                      <SelectItem key={product.id} value={product.id}>
+                        {product.name}
+                      </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">정렬</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  정렬
+                </label>
                 <Select value={sortBy} onValueChange={setSortBy}>
                   <SelectTrigger data-testid="select-sort">
                     <SelectValue />
@@ -206,10 +254,14 @@ export default function Blog() {
             </div>
 
             {/* Active Filters */}
-            {(searchQuery || selectedDifficulty !== "all" || selectedProduct !== "all") && (
+            {(searchQuery ||
+              selectedDifficulty !== "all" ||
+              selectedProduct !== "all") && (
               <div className="mt-4 pt-4 border-t">
                 <div className="flex items-center space-x-2 flex-wrap">
-                  <span className="text-sm font-medium text-gray-700">활성 필터:</span>
+                  <span className="text-sm font-medium text-gray-700">
+                    활성 필터:
+                  </span>
                   {searchQuery && (
                     <Badge variant="secondary" className="cursor-pointer">
                       "{searchQuery}" ×
@@ -222,7 +274,11 @@ export default function Blog() {
                   )}
                   {selectedProduct !== "all" && (
                     <Badge variant="secondary" className="cursor-pointer">
-                      {products.find((p: Product) => p.id === selectedProduct)?.name} ×
+                      {
+                        products.find((p: Product) => p.id === selectedProduct)
+                          ?.name
+                      }{" "}
+                      ×
                     </Badge>
                   )}
                 </div>
@@ -235,14 +291,22 @@ export default function Blog() {
         <div className="grid md:grid-cols-4 gap-6 mb-8">
           <Card className="text-center">
             <CardContent className="p-6">
-              <div className="text-3xl font-bold text-asran-amber mb-2">{filteredRecipes.length}</div>
+              <div className="text-3xl font-bold text-asran-amber mb-2">
+                {filteredRecipes.length}
+              </div>
               <div className="text-gray-600">레시피</div>
             </CardContent>
           </Card>
           <Card className="text-center">
             <CardContent className="p-6">
               <div className="text-3xl font-bold text-asran-amber mb-2">
-                {Math.round(filteredRecipes.reduce((sum: number, r: Recipe) => sum + r.timeMinutes, 0) / filteredRecipes.length || 0)}분
+                {Math.round(
+                  filteredRecipes.reduce(
+                    (sum: number, r: Recipe) => sum + r.timeMinutes,
+                    0,
+                  ) / filteredRecipes.length || 0,
+                )}
+                분
               </div>
               <div className="text-gray-600">평균 조리시간</div>
             </CardContent>
@@ -250,7 +314,13 @@ export default function Blog() {
           <Card className="text-center">
             <CardContent className="p-6">
               <div className="text-3xl font-bold text-asran-amber mb-2">
-                {Math.round(filteredRecipes.reduce((sum: number, r: Recipe) => sum + r.servings, 0) / filteredRecipes.length || 0)}인분
+                {Math.round(
+                  filteredRecipes.reduce(
+                    (sum: number, r: Recipe) => sum + r.servings,
+                    0,
+                  ) / filteredRecipes.length || 0,
+                )}
+                인분
               </div>
               <div className="text-gray-600">평균 인분</div>
             </CardContent>
@@ -258,7 +328,10 @@ export default function Blog() {
           <Card className="text-center">
             <CardContent className="p-6">
               <div className="text-3xl font-bold text-asran-amber mb-2">
-                {filteredRecipes.filter((r: Recipe) => r.difficulty === "초급").length}
+                {
+                  filteredRecipes.filter((r: Recipe) => r.difficulty === "초급")
+                    .length
+                }
               </div>
               <div className="text-gray-600">초급 레시피</div>
             </CardContent>
@@ -287,12 +360,13 @@ export default function Blog() {
           <Card>
             <CardContent className="p-12 text-center" data-testid="no-recipes">
               <ChefHat className="w-16 h-16 mx-auto text-gray-400 mb-4" />
-              <h3 className="text-xl font-semibold text-gray-700 mb-2">조건에 맞는 레시피가 없습니다</h3>
+              <h3 className="text-xl font-semibold text-gray-700 mb-2">
+                조건에 맞는 레시피가 없습니다
+              </h3>
               <p className="text-gray-600 mb-6">
-                {searchQuery 
+                {searchQuery
                   ? "다른 키워드로 검색해보시거나 필터를 조정해보세요"
-                  : "선택한 조건을 변경해보세요"
-                }
+                  : "선택한 조건을 변경해보세요"}
               </p>
               <Button
                 onClick={() => {
@@ -312,7 +386,10 @@ export default function Blog() {
               <p>{filteredRecipes.length}개의 레시피를 찾았습니다</p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" data-testid="recipes-grid">
+            <div
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+              data-testid="recipes-grid"
+            >
               {filteredRecipes.map((recipe: Recipe) => (
                 <RecipeCard
                   key={recipe.id}
@@ -325,8 +402,14 @@ export default function Blog() {
         )}
 
         {/* Recipe Detail Modal */}
-        <Dialog open={!!selectedRecipe} onOpenChange={() => setSelectedRecipe(null)}>
-          <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto" data-testid="dialog-recipe-detail">
+        <Dialog
+          open={!!selectedRecipe}
+          onOpenChange={() => setSelectedRecipe(null)}
+        >
+          <DialogContent
+            className="max-w-4xl max-h-[90vh] overflow-y-auto"
+            data-testid="dialog-recipe-detail"
+          >
             {selectedRecipe && (
               <>
                 <DialogHeader>
@@ -334,11 +417,15 @@ export default function Blog() {
                     {selectedRecipe.title}
                   </DialogTitle>
                   <DialogDescription className="flex items-center space-x-4 text-lg">
-                    <Badge className={
-                      selectedRecipe.difficulty === "초급" ? "bg-green-100 text-green-800" :
-                      selectedRecipe.difficulty === "중급" ? "bg-yellow-100 text-yellow-800" :
-                      "bg-red-100 text-red-800"
-                    }>
+                    <Badge
+                      className={
+                        selectedRecipe.difficulty === "초급"
+                          ? "bg-green-100 text-green-800"
+                          : selectedRecipe.difficulty === "중급"
+                            ? "bg-yellow-100 text-yellow-800"
+                            : "bg-red-100 text-red-800"
+                      }
+                    >
                       {selectedRecipe.difficulty}
                     </Badge>
                     <span className="flex items-center">
@@ -366,7 +453,9 @@ export default function Blog() {
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-asran-gray mb-3">조리 과정</h4>
+                    <h4 className="font-semibold text-asran-gray mb-3">
+                      조리 과정
+                    </h4>
                     <ol className="space-y-3">
                       {selectedRecipe.steps.map((step, index) => (
                         <li key={index} className="flex">
@@ -381,7 +470,9 @@ export default function Blog() {
 
                   {selectedRecipe.tips.length > 0 && (
                     <div>
-                      <h4 className="font-semibold text-asran-gray mb-3">요리 팁</h4>
+                      <h4 className="font-semibold text-asran-gray mb-3">
+                        요리 팁
+                      </h4>
                       <ul className="space-y-2">
                         {selectedRecipe.tips.map((tip, index) => (
                           <li key={index} className="flex items-start">
@@ -397,11 +488,16 @@ export default function Blog() {
                     <div className="flex justify-between items-center">
                       <div>
                         <p className="text-sm text-gray-600">추천 제품</p>
-                        <p className="font-medium text-asran-amber">{selectedRecipe.bestWith}</p>
+                        <p className="font-medium text-asran-amber">
+                          {selectedRecipe.bestWith}
+                        </p>
                       </div>
                       <div className="flex space-x-2">
                         <Link href="/products/asran-pressure-24">
-                          <Button className="bg-asran-amber hover:bg-yellow-500 text-asran-gray" data-testid="button-view-products">
+                          <Button
+                            className="bg-asran-amber hover:bg-yellow-500 text-asran-gray"
+                            data-testid="button-view-products"
+                          >
                             추천 제품 보기
                           </Button>
                         </Link>

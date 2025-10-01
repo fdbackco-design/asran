@@ -10,13 +10,17 @@ interface ReviewCardProps {
   className?: string;
 }
 
-export default function ReviewCard({ review, showProduct = false, className }: ReviewCardProps) {
+export default function ReviewCard({
+  review,
+  showProduct = false,
+  className,
+}: ReviewCardProps) {
   const formatDate = (dateString: string | Date) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('ko-KR', {
-      year: 'numeric',
-      month: 'numeric',
-      day: 'numeric'
+    return date.toLocaleDateString("ko-KR", {
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
     });
   };
 
@@ -28,7 +32,10 @@ export default function ReviewCard({ review, showProduct = false, className }: R
             {review.author.charAt(0)}
           </div>
           <div className="ml-3">
-            <p className="font-semibold text-asran-gray" data-testid={`text-author-${review.id}`}>
+            <p
+              className="font-semibold text-asran-gray"
+              data-testid={`text-author-${review.id}`}
+            >
               {review.author}
             </p>
             <div className="flex items-center space-x-2">
@@ -42,7 +49,10 @@ export default function ReviewCard({ review, showProduct = false, className }: R
                   />
                 ))}
               </div>
-              <span className="text-sm text-gray-500" data-testid={`text-date-${review.id}`}>
+              <span
+                className="text-sm text-gray-500"
+                data-testid={`text-date-${review.id}`}
+              >
                 {formatDate(review.createdAt)}
               </span>
             </div>
@@ -61,18 +71,25 @@ export default function ReviewCard({ review, showProduct = false, className }: R
           </div>
         )}
 
-        <p className="text-gray-700 mb-4" data-testid={`text-content-${review.id}`}>
+        <p
+          className="text-gray-700 mb-4"
+          data-testid={`text-content-${review.id}`}
+        >
           {review.content}
         </p>
 
         <div className="flex items-center justify-between">
           {showProduct && (
-            <Badge variant="outline" className="text-asran-amber border-asran-amber">
-              {review.productId === 'asran-pot-3set' && '아슬란 냄비 3종 세트'}
-              {review.productId === 'asran-frypan-28' && '아슬란 후라이팬 28cm'}
-              {review.productId === 'asran-pressure-24' && '아슬란 압력솥 24cm'}
-              {review.productId === 'asran-knife-board-set' && '아슬란 칼 & 도마 세트'}
-              {review.productId === 'asran-cutlery-set' && '아슬란 수저 세트'}
+            <Badge
+              variant="outline"
+              className="text-asran-amber border-asran-amber"
+            >
+              {review.productId === "asran-pot-3set" && "아스란 냄비 3종 세트"}
+              {review.productId === "asran-frypan-28" && "아스란 후라이팬 28cm"}
+              {review.productId === "asran-pressure-24" && "아스란 압력솥 24cm"}
+              {review.productId === "asran-knife-board-set" &&
+                "아스란 칼 & 도마 세트"}
+              {review.productId === "asran-cutlery-set" && "아스란 수저 세트"}
             </Badge>
           )}
           <div className="flex items-center space-x-2">

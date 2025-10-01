@@ -45,9 +45,11 @@ export function generateRecipeSEO(recipe: Recipe) {
 
 export function generateHomeSEO() {
   return {
-    title: "아슬란(ASRAN) - 독일 기술력의 프리미엄 주방용품",
-    description: "독일 기술력과 합리적 가격을 자랑하는 아슬란 주방용품. 냄비 세트, 후라이팬, 압력솥으로 완벽한 요리를 경험하세요. 50,000원 이상 무료배송.",
-    keywords: "아슬란, ASRAN, 독일 주방용품, 냄비, 후라이팬, 압력솥, 인덕션 호환, 프리미엄 주방용품",
+    title: "아스란(ASRAN) - 독일 기술력의 프리미엄 주방용품",
+    description:
+      "독일 기술력과 합리적 가격을 자랑하는 아스란 주방용품. 냄비 세트, 후라이팬, 압력솥으로 완벽한 요리를 경험하세요. 50,000원 이상 무료배송.",
+    keywords:
+      "아스란, ASRAN, 독일 주방용품, 냄비, 후라이팬, 압력솥, 인덕션 호환, 프리미엄 주방용품",
     openGraph: {
       title: "ASRAN - 독일 기술력의 프리미엄 주방용품",
       description: "독일 기술력과 합리적 가격의 완벽한 조합",
@@ -59,21 +61,29 @@ export function generateHomeSEO() {
 }
 
 // Update document head with SEO data
-export function updateSEO(seoData: ReturnType<typeof generateProductSEO | typeof generateRecipeSEO | typeof generateHomeSEO>) {
+export function updateSEO(
+  seoData: ReturnType<
+    | typeof generateProductSEO
+    | typeof generateRecipeSEO
+    | typeof generateHomeSEO
+  >,
+) {
   // Update title
   document.title = seoData.title;
 
   // Update or create meta tags
   const updateMeta = (name: string, content: string, property = false) => {
     const attribute = property ? "property" : "name";
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
-    
+    let meta = document.querySelector(
+      `meta[${attribute}="${name}"]`,
+    ) as HTMLMetaElement;
+
     if (!meta) {
       meta = document.createElement("meta");
       meta.setAttribute(attribute, name);
       document.head.appendChild(meta);
     }
-    
+
     meta.content = content;
   };
 
@@ -88,14 +98,18 @@ export function updateSEO(seoData: ReturnType<typeof generateProductSEO | typeof
     updateMeta("og:description", seoData.openGraph.description, true);
     updateMeta("og:type", seoData.openGraph.type, true);
     updateMeta("og:site_name", "ASRAN", true);
-    
+
     if ("image" in seoData.openGraph && seoData.openGraph.image) {
       updateMeta("og:image", seoData.openGraph.image, true);
       updateMeta("og:image:width", "1200", true);
       updateMeta("og:image:height", "630", true);
-      updateMeta("og:image:alt", "ASRAN - 독일 기술력의 프리미엄 주방용품", true);
+      updateMeta(
+        "og:image:alt",
+        "ASRAN - 독일 기술력의 프리미엄 주방용품",
+        true,
+      );
     }
-    
+
     if ("url" in seoData.openGraph && seoData.openGraph.url) {
       updateMeta("og:url", seoData.openGraph.url, true);
     }

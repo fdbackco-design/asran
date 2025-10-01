@@ -1,7 +1,7 @@
 [
   {
     "id": "asran-pot-3set",
-    "name": "아슬란 냄비 3종 세트",
+    "name": "아스란 냄비 3종 세트",
     "category": "냄비 3종 세트",
     "slug": "asran-pot-3set",
     "price": 99000,
@@ -23,7 +23,7 @@
   },
   {
     "id": "asran-frypan-28",
-    "name": "아슬란 후라이팬 28cm",
+    "name": "아스란 후라이팬 28cm",
     "category": "후라이팬",
     "slug": "asran-frypan-28",
     "price": 49000,
@@ -42,7 +42,7 @@
   },
   {
     "id": "asran-pressure-24",
-    "name": "아슬란 압력솥 24cm",
+    "name": "아스란 압력솥 24cm",
     "category": "압력솥",
     "slug": "asran-pressure-24",
     "price": 129000,
@@ -62,7 +62,7 @@
   },
   {
     "id": "asran-knife-board-set",
-    "name": "아슬란 칼 & 도마 세트",
+    "name": "아스란 칼 & 도마 세트",
     "category": "칼&도마",
     "slug": "asran-knife-board-set",
     "price": 79000,
@@ -85,7 +85,7 @@
   },
   {
     "id": "asran-cutlery-set",
-    "name": "아슬란 수저 세트",
+    "name": "아스란 수저 세트",
     "category": "수저세트",
     "slug": "asran-cutlery-set",
     "price": 39000,

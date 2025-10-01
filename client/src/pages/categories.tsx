@@ -8,13 +8,13 @@ import { updateSEO } from "@/lib/seo";
 export default function Categories() {
   useEffect(() => {
     updateSEO({
-      title: "제품 카테고리 - 아슬란 주방용품 | ASRAN",
+      title: "제품 카테고리 - 아스란 주방용품 | ASRAN",
       description:
         "독일 기술력의 프리미엄 주방용품을 카테고리별로 만나보세요. 냄비 3종 세트, 프라이팬, 칼&도마, 압력솥, 수저세트.",
       keywords:
-        "아슬란, 주방용품, 카테고리, 냄비, 프라이팬, 압력솥, 칼, 도마, 수저세트",
+        "아스란, 주방용품, 카테고리, 냄비, 프라이팬, 압력솥, 칼, 도마, 수저세트",
       openGraph: {
-        title: "제품 카테고리 - 아슬란 주방용품",
+        title: "제품 카테고리 - 아스란 주방용품",
         description:
           "독일 기술력의 프리미엄 주방용품을 카테고리별로 만나보세요.",
         type: "website",
