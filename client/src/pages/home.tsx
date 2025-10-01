@@ -186,7 +186,7 @@ export default function Home() {
                         if (e.key === "Enter") {
                           const query = e.currentTarget.value.trim();
                           if (query) {
-                            window.location.href = `/blog?search=${encodeURIComponent(query)}`;
+                            window.location.href = `/blog`;
                           }
                         }
                       }}
