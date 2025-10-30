@@ -92,41 +92,80 @@ export default function Support() {
     <div className="min-h-screen bg-asran-bg" data-testid="page-support">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Customer Service Banner */}
-        <div className="relative bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800 rounded-2xl overflow-hidden mb-12">
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600"></div>
-            <div className="absolute top-0 left-0 w-full h-full">
-              <div className="absolute top-10 left-10 w-32 h-32 border-l-2 border-t-2 border-white/20"></div>
-              <div className="absolute top-10 right-10 w-32 h-32 border-r-2 border-t-2 border-white/20"></div>
-              <div className="absolute bottom-10 left-10 w-32 h-32 border-l-2 border-b-2 border-white/20"></div>
-              <div className="absolute bottom-10 right-10 w-32 h-32 border-r-2 border-b-2 border-white/20"></div>
-            </div>
-          </div>
+        <div className="relative rounded-2xl overflow-hidden mb-12">
+          {/* ✅ 배경 이미지 */}
+          <img
+            src="/build.jpg" // 배경 이미지 경로 (public/assets에 저장)
+            alt="ASRAN A/S Center"
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+          />
 
-          <div className="relative z-10 text-center py-16 px-8">
-            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-              ASRAN A/S 센터
+          {/* ✅ 반투명 오버레이 */}
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" />
+
+          {/* ✅ 콘텐츠 영역 */}
+          <div className="relative z-10 text-center text-white py-16 px-8">
+            <h1 className="text-4xl lg:text-5xl font-bold mb-4">
+              고객 지원 안내
             </h1>
             <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-              ASRAN은 A/S 센터를 상시 운영하고 있습니다.
+              아래 연락처로 빠르게 도와드리겠습니다.
             </p>
 
-            {/* Phone Number */}
-            <div className="flex items-center justify-center mb-6">
-              <Phone className="w-8 h-8 text-asran-amber mr-4" />
-              <span className="text-4xl font-bold text-white tracking-wider">
-                031-429-8570
-              </span>
+            {/* Customer Service Numbers */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center mb-10">
+              {/* 제품 고장·불량 관련 CS */}
+              <div className="flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-6">
+                <div className="flex items-center justify-center mb-3">
+                  <Phone className="w-6 h-6 text-asran-amber mr-2" />
+                  <span className="text-2xl font-bold text-white tracking-wide">
+                    고객센터 (A/S)
+                  </span>
+                </div>
+                <span className="text-3xl font-bold text-white">
+                  031-429-8570
+                </span>
+                <p className="text-white/70 mt-2 text-sm text-center leading-relaxed">
+                  제품 고장 및 불량 문의는 <br /> 고객센터로 연락 부탁드립니다.
+                </p>
+              </div>
+
+              {/* B2B 문의 */}
+              <div className="flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-6">
+                <div className="flex items-center justify-center mb-3">
+                  <Phone className="w-6 h-6 text-asran-amber mr-2" />
+                  <span className="text-2xl font-bold text-white tracking-wide">
+                    B2B 납품 문의
+                  </span>
+                </div>
+                <span className="text-3xl font-bold text-white">
+                  070-8211-1761
+                </span>
+
+                <div className="mt-2 text-sm text-white/80">
+                  담당자:{" "}
+                  <span className="font-medium text-white">손성훈 이사</span>
+                </div>
+                <a
+                  href="mailto:fdbackteams@gmail.com"
+                  className="text-white underline text-sm mt-1"
+                >
+                  fdbackteams@gmail.com
+                </a>
+                <p className="text-white/70 mt-2 text-sm text-center leading-relaxed">
+                  대량 구매 및 납품 문의는 <br /> 담당자에게 연락 부탁드립니다.
+                </p>
+              </div>
             </div>
 
-            {/* Business Hours */}
+            {/* 운영 시간 */}
             <div className="text-white/90 mb-8">
               <div className="text-lg font-medium">
-                운영시간 : AM 10:00 ~ PM 17:00
+                운영시간 : AM 10:00 ~ PM 18:00
               </div>
               <div className="text-base text-white/70 mt-1">
-                점심시간 PM 12:00~ PM 13:00
+                점심시간 PM 12:30 ~ PM 13:30
               </div>
             </div>
 
@@ -136,8 +175,8 @@ export default function Support() {
             </Button>
           </div>
 
-          {/* Decorative Elements */}
-          <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/20 to-transparent"></div>
+          {/* 아래 그라디언트 여백 */}
+          <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/40 to-transparent"></div>
         </div>
 
         {/* FAQ Section */}
