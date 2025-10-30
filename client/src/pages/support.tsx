@@ -92,10 +92,10 @@ export default function Support() {
     <div className="min-h-screen bg-asran-bg" data-testid="page-support">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Customer Service Banner */}
-        <div className="relative rounded-2xl overflow-hidden mb-12">
+        <div className="relative rounded-lg sm:rounded-2xl overflow-hidden mb-8 sm:mb-12">
           {/* ✅ 배경 이미지 */}
           <img
-            src="/build.jpg" // 배경 이미지 경로 (public/assets에 저장)
+            src="/build.jpg"
             alt="ASRAN A/S Center"
             className="absolute inset-0 w-full h-full object-cover"
             loading="lazy"
@@ -105,73 +105,79 @@ export default function Support() {
           <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" />
 
           {/* ✅ 콘텐츠 영역 */}
-          <div className="relative z-10 text-center text-white py-16 px-8">
-            <h1 className="text-4xl lg:text-5xl font-bold mb-4">
+          <div className="relative z-10 text-center text-white py-8 px-4 sm:py-12 md:py-16 sm:px-6 md:px-8">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
               고객 지원 안내
             </h1>
-            <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-white/80 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
               아래 연락처로 빠르게 도와드리겠습니다.
             </p>
 
             {/* Customer Service Numbers */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 justify-center mb-6 sm:mb-10">
               {/* 제품 고장·불량 관련 CS */}
-              <div className="flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-6">
-                <div className="flex items-center justify-center mb-3">
-                  <Phone className="w-6 h-6 text-asran-amber mr-2" />
-                  <span className="text-2xl font-bold text-white tracking-wide">
+              <div className="flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl sm:rounded-2xl p-4 sm:p-6">
+                <div className="flex items-center justify-center mb-2 sm:mb-3">
+                  <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-asran-amber mr-2" />
+                  <span className="text-lg sm:text-xl md:text-2xl font-bold text-white tracking-wide">
                     고객센터 (A/S)
                   </span>
                 </div>
-                <span className="text-3xl font-bold text-white">
+                <a
+                  href="tel:031-429-8570"
+                  className="text-2xl sm:text-3xl font-bold text-white hover:text-asran-amber transition-colors"
+                >
                   031-429-8570
-                </span>
-                <p className="text-white/70 mt-2 text-sm text-center leading-relaxed">
-                  제품 고장 및 불량 문의는 <br /> 고객센터로 연락 부탁드립니다.
+                </a>
+                <p className="text-white/70 mt-2 text-xs sm:text-sm text-center leading-relaxed">
+                  제품 고장 및 불량 문의는 <br className="sm:hidden" /> 고객센터로 연락 부탁드립니다.
                 </p>
               </div>
 
               {/* B2B 문의 */}
-              <div className="flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-6">
-                <div className="flex items-center justify-center mb-3">
-                  <Phone className="w-6 h-6 text-asran-amber mr-2" />
-                  <span className="text-2xl font-bold text-white tracking-wide">
+              <div className="flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl sm:rounded-2xl p-4 sm:p-6">
+                <div className="flex items-center justify-center mb-2 sm:mb-3">
+                  <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-asran-amber mr-2" />
+                  <span className="text-lg sm:text-xl md:text-2xl font-bold text-white tracking-wide">
                     B2B 납품 문의
                   </span>
                 </div>
-                <span className="text-3xl font-bold text-white">
+                <a
+                  href="tel:070-8211-1761"
+                  className="text-2xl sm:text-3xl font-bold text-white hover:text-asran-amber transition-colors"
+                >
                   070-8211-1761
-                </span>
+                </a>
 
-                <div className="mt-2 text-sm text-white/80">
+                <div className="mt-2 text-xs sm:text-sm text-white/80">
                   담당자:{" "}
                   <span className="font-medium text-white">손성훈 이사</span>
                 </div>
                 <a
                   href="mailto:fdbackteams@gmail.com"
-                  className="text-white underline text-sm mt-1"
+                  className="text-white hover:text-asran-amber underline text-xs sm:text-sm mt-1 transition-colors"
                 >
                   fdbackteams@gmail.com
                 </a>
-                <p className="text-white/70 mt-2 text-sm text-center leading-relaxed">
-                  대량 구매 및 납품 문의는 <br /> 담당자에게 연락 부탁드립니다.
+                <p className="text-white/70 mt-2 text-xs sm:text-sm text-center leading-relaxed">
+                  대량 구매 및 납품 문의는 <br className="sm:hidden" /> 담당자에게 연락 부탁드립니다.
                 </p>
               </div>
             </div>
 
             {/* 운영 시간 */}
-            <div className="text-white/90 mb-8">
-              <div className="text-lg font-medium">
+            <div className="text-white/90 mb-6 sm:mb-8">
+              <div className="text-base sm:text-lg font-medium">
                 운영시간 : AM 10:00 ~ PM 18:00
               </div>
-              <div className="text-base text-white/70 mt-1">
+              <div className="text-sm sm:text-base text-white/70 mt-1">
                 점심시간 PM 12:30 ~ PM 13:30
               </div>
             </div>
           </div>
 
           {/* 아래 그라디언트 여백 */}
-          <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/40 to-transparent"></div>
+          <div className="absolute bottom-0 left-0 w-full h-16 sm:h-20 bg-gradient-to-t from-black/40 to-transparent"></div>
         </div>
 
         {/* FAQ Section */}
