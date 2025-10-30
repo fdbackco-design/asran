@@ -168,11 +168,6 @@ export default function Support() {
                 점심시간 PM 12:30 ~ PM 13:30
               </div>
             </div>
-
-            {/* CTA Button */}
-            <Button className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 text-lg font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
-              A/S 센터 자세히 보기
-            </Button>
           </div>
 
           {/* 아래 그라디언트 여백 */}
