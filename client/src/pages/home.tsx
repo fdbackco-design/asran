@@ -57,13 +57,15 @@ export default function Home() {
   return (
     <div className="min-h-screen" data-testid="page-home">
       {/* Hero Section */}
-      <section className="relative" data-testid="hero-section">
-        <img
-          src="/asranbanner1.png"
-          alt="아스란 주방용품"
-          className="w-full h-auto"
-          data-testid="hero-image"
-        />
+      <section className="relative overflow-hidden" data-testid="hero-section">
+        <div className="w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[550px]">
+          <img
+            src="/asranbanner1.png"
+            alt="아스란 주방용품"
+            className="w-full h-full object-cover"
+            data-testid="hero-image"
+          />
+        </div>
         <div className="absolute bottom-4 left-4 sm:bottom-8 sm:left-32">
           <Link href="/products/asran-pot-3set">
             <Button
